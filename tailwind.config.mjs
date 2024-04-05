@@ -4,5 +4,18 @@ export default {
 	theme: {
 		extend: {}
 	},
-	plugins: [require('@tailwindcss/forms')]
+	plugins: [require('daisyui')],
+	daisyui: {
+		themes: [
+			{
+				mytheme: {
+					primary: '#FF7992', // pink
+					secondary: '#242424', // gray
+					accent: '#8065b1', // purple
+					neutral: '#000000', // black
+					'base-100': '#ffffff' // white
+				}
+			}
+		]
+	}
 };

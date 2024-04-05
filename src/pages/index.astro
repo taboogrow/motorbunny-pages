@@ -1,35 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import FeedbackForm from '../components/FeedbackForm';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<h1>Ahoy Astronaut</h1>
-		<!-- <FeedbackForm client:load /> -->
-		<button
-			class="g-recaptcha"
-			data-sitekey="6LdfDmgpAAAAAERHXEsLmUEqi4hrSWFp_Le8CkvU"
-			data-callback="onSubmit"
-			data-action="submit"
-		>
-			Click me to verify the captcha challenge!
-		</button>
-		<script is:inline>
-			function onSubmit(token) {
-				fetch('/recaptcha', {
-					method: 'POST',
-					body: JSON.stringify({ recaptcha: token })
-				})
-					.then((response) => response.json())
-					.then((gResponse) => {
-						if (gResponse.success) {
-							// Captcha verification was a success
-						} else {
-							// Captcha verification failed
-						}
-					});
-			}
-		</script>
 	</main>
 </Layout>
