@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import money from '../assets/icons/money-icon.png';
+import checkmark from '../assets/icons/checkmark-icon.png';
+import ribbon from '../assets/icons/ribbon-icon.png';
+import wireless from '../assets/icons/wireless-icon.png';
+import trophy from '../assets/icons/trophy-icon.png';
+---
+
+<ul class="mt-8 flex list-none flex-col gap-y-4 text-lg text-gray-300 lg:mt-14 lg:text-3xl">
+	<li class="flex items-center gap-x-3">
+		<div>
+			<Image src={money} alt="money bag icon" />
+		</div>
+		<span>Save Up To $446 (35%)</span>
+	</li>
+	<li class="flex items-center gap-x-3">
+		<div>
+			<Image src={checkmark} alt="money bag icon" />
+		</div>
+		<span>45-Day Satisfaction Guarantee</span>
+	</li>
+	<li class="flex items-center gap-x-3">
+		<div>
+			<Image src={ribbon} alt="money bag icon" />
+		</div>
+		<span>11-Year Warranty & Quality Guarantee</span>
+	</li>
+	<li class="flex items-center gap-x-3">
+		<div>
+			<Image src={wireless} alt="money bag icon" />
+		</div>
+		<span>Wireless Control from Anywhere</span>
+	</li>
+	<li class="flex items-center gap-x-3">
+		<div>
+			<Image src={trophy} alt="money bag icon" />
+		</div>
+		<span>More Power, More Features</span>
+	</li>
+</ul>

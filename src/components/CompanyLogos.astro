@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import cosmo from '../assets/logos/cosmopolitan-logo-white.png';
+import allure from '../assets/logos/allure-logo-white.png';
+import gizmodo from '../assets/logos/gizmodo-logo-white.png';
+import penthouse from '../assets/logos/penthouse-logo-white.png';
+---
+
+<section class="mx-auto max-w-[1440px] bg-secondary px-2 py-12 text-center">
+	<span class="text-2xl font-bold text-primary">As seen in</span>
+	<div
+		class="mx-auto mt-8 flex max-w-screen-xl flex-wrap items-center justify-around gap-4 md:gap-8"
+	>
+		<Image class="max-w-[150px] sm:max-w-[200px]" src={cosmo} alt="cosmopolitan logo" />
+		<Image class="max-w-[150px] sm:max-w-[200px]" src={penthouse} alt="penthouse logo" />
+		<Image class="max-w-[150px] sm:max-w-[200px]" src={allure} alt="allure logo" />
+		<Image class="max-w-[150px] sm:max-w-[200px]" src={gizmodo} alt="gizmodo logo" />
+	</div>
+</section>

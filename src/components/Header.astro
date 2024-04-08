@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logos/motorbunny-com-logo-pink.png';
+import bunny from '../assets/icons/bunny-icon.png';
+---
+
+<header class="sticky inset-0 z-50 mx-auto max-w-[1440px] bg-neutral/90 p-2">
+	<div class="flex items-center justify-between">
+		<a href="#top">
+			<Image class="max-w-[200px]" src={logo} alt="motorbunny.com logo" />
+		</a>
+		<div class="flex items-center justify-center gap-4">
+			<div class="indicator">
+				<span id="signup-indicator" class="badge indicator-item badge-primary badge-xs"></span>
+				<div id="bunny-icon" class="cursor-pointer">
+					<Image src={bunny} alt="bunny icon" />
+				</div>
+			</div>
+			<a href="#offers" class="btn btn-primary">View Offers</a>
+		</div>
+	</div>
+</header>
+
+<script>
+	const signupModalButton = document.getElementById('bunny-icon');
+	const signupIndicator = document.getElementById('signup-indicator');
+	function handleClick() {
+		console.log('Open Spin-to-Win!');
+		signupIndicator.classList.add('hidden');
+	}
+	signupModalButton.addEventListener('click', handleClick);
+</script>
