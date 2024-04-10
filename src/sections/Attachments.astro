@@ -1,0 +1,33 @@
+---
+import Section from '../components/Section.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import logo from '../assets/logos/motorbunny-logo-pink.png';
+import attachment1 from '../assets/images/attachment-1.png';
+import attachment2 from '../assets/images/attachment-2.png';
+import attachment3 from '../assets/images/attachment-3.png';
+import attachment4 from '../assets/images/attachment-4.png';
+import attachment5 from '../assets/images/attachment-5.png';
+import attachment6 from '../assets/images/attachment-6.png';
+import attachment7 from '../assets/images/attachment-7.png';
+import attachment8 from '../assets/images/attachment-8.png';
+import { Image } from 'astro:assets';
+---
+
+<Section bg="light">
+	<SectionTitle
+		title="Only With"
+		src={logo}
+		subtitle="Premium Attachments for Men & Women"
+		color="dark"
+	/>
+	<div class="mt-12 grid w-full grid-cols-2 sm:grid-cols-4">
+		<Image src={attachment1} alt="bad dragon attachment" />
+		<Image src={attachment2} alt="bad dragon attachment" />
+		<Image src={attachment3} alt="bad dragon attachment" />
+		<Image src={attachment4} alt="bad dragon attachment" />
+		<Image src={attachment5} alt="bad dragon attachment" />
+		<Image src={attachment6} alt="bad dragon attachment" />
+		<Image src={attachment7} alt="bad dragon attachment" />
+		<Image src={attachment8} alt="bad dragon attachment" />
+	</div>
+</Section>

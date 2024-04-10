@@ -5,19 +5,30 @@ type Props = {
 	title: string;
 	subtitle?: string;
 	src?: ImageMetadata;
+	color?: 'light' | 'dark' | 'primary';
 };
 
-const { title, subtitle, src } = Astro.props;
+const { title, subtitle, src, color } = Astro.props;
 ---
 
 <div class="w-full space-y-4 text-center">
 	<h2
-		class="mx-auto flex max-w-[800px] items-center justify-center gap-x-4 text-balance text-5xl font-bold"
+		class="mx-auto flex max-w-[800px] flex-col items-center justify-center gap-x-4 text-balance text-5xl font-bold sm:flex-row"
 	>
-		<span class={src ? 'mt-4' : ''}>{title}</span>
+		<span
+			class={`${src ? 'mt-4' : ''} ${
+				color === 'light'
+					? 'text-white'
+					: color === 'dark'
+						? 'text-black'
+						: color === 'primary'
+							? 'text-primary'
+							: ''
+			}`}>{title}</span
+		>
 		{src && <Image class="max-w-[300px]" src={src} alt="" />}
 	</h2>
-	{subtitle && <p class="mt-4 text-3xl font-semibold text-primary">{subtitle}</p>}
+	{subtitle && <p class="mt-4 text-balance text-3xl font-semibold text-primary">{subtitle}</p>}
 </div>
 
 <style>

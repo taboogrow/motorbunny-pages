@@ -1,6 +1,9 @@
 ---
 import { Image } from 'astro:assets';
+// components
 import SectionTitle from '../components/SectionTitle.astro';
+import AppIcon from '../components/AppIcon.astro';
+// assets
 import logo from '../assets/logos/motorbunny-logo-pink.png';
 import img1 from '../assets/images/app-features-01.jpg';
 import img2 from '../assets/images/app-features-02.png';
@@ -9,71 +12,95 @@ import img4 from '../assets/images/app-features-04.png';
 import fappy1 from '../assets/images/fappy-bunny-01.png';
 import rusty1 from '../assets/images/rusty-01.png';
 import snow1 from '../assets/images/snow-bunny-01.png';
+import dial from '../assets/icons/dial-icon.png';
+import music from '../assets/icons/music-icon.png';
+import sound from '../assets/icons/sound-icon.png';
+import bulb from '../assets/icons/bulb-icon.png';
+import reverse from '../assets/icons/reverse-icon.png';
 ---
 
 <section class="mx-auto max-w-[1440px] py-12">
 	<SectionTitle title="Only With" src={logo} subtitle="Cutting-Edge Integrated App" />
-	<div class="mt-16 grid w-full sm:grid-cols-2">
-		<div class="flex w-full items-center">
-			<Image class="sm:rounded-br-2xl sm:rounded-tr-2xl" src={img1} alt="" />
+	<div class="space-y-16">
+		<!-- section 1: app -->
+		<div class="grid w-full sm:grid-cols-2">
+			<div class="flex w-full items-center">
+				<Image class="sm:rounded-br-2xl sm:rounded-tr-2xl" src={img1} alt="" />
+			</div>
+			<div class="flex w-full items-center justify-center px-2">
+				<Image src={img2} alt="" />
+			</div>
 		</div>
-		<div class="flex w-full items-center justify-center px-2">
-			<Image src={img2} alt="" />
+		<!-- section 2: features -->
+		<div class="mx-auto grid w-full max-w-screen-xl gap-8 px-2 sm:grid-cols-2">
+			<div class="flex w-full flex-col items-center justify-center gap-y-8">
+				<SectionTitle title="Wirelessly Control From Anywhere" />
+				<Image class="rounded-2xl" src={img3} alt="" />
+			</div>
+			<div class="flex w-full flex-col items-center justify-center gap-y-8">
+				<SectionTitle title="Compatible With Other Digital Toys" />
+				<Image class="rounded-2xl" src={img4} alt="" />
+			</div>
 		</div>
-	</div>
-	<div class="mx-auto mt-16 grid w-full max-w-screen-xl px-2 sm:grid-cols-2">
-		<div class="flex w-full flex-col items-center justify-center gap-y-8">
-			<SectionTitle title="Wirelessly Control From Anywhere" />
-			<Image class="rounded-2xl" src={img3} alt="" />
+		<!-- section 3: games -->
+		<div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center px-2">
+			<SectionTitle title="Motorbunny Video Games Synced To Your Machine" />
+			<div>
+				<Image src={fappy1} alt="" />
+			</div>
+			<div>
+				<Image src={rusty1} alt="" />
+			</div>
+			<div class="mt-8">
+				<Image src={snow1} alt="" />
+			</div>
 		</div>
-		<div class="flex w-full flex-col items-center justify-center gap-y-8">
-			<SectionTitle title="Compatible With Other Digital Toys" />
-			<Image class="rounded-2xl" src={img4} alt="" />
-		</div>
-	</div>
-	<div class="mx-auto mt-16 flex w-full max-w-screen-xl flex-col items-center justify-center px-2">
-		<SectionTitle title="Motorbunny Video Games Synced To Your Machine" />
-		<div>
-			<Image src={fappy1} alt="" />
-		</div>
-		<div>
-			<Image src={rusty1} alt="" />
-		</div>
-		<div class="mt-8">
-			<Image src={snow1} alt="" />
-		</div>
-	</div>
-	<div class="mx-auto mt-16 w-full max-w-screen-xl px-2">
-		<SectionTitle title="Watch Ladies Play Flappy Bunny" />
-		<div class="mt-12">
-			<script src="https://fast.wistia.com/embed/medias/pj4j6y2xrr.jsonp" async></script><script
-				src="https://fast.wistia.com/assets/external/E-v1.js"
-				async></script><div
-				class="wistia_responsive_padding"
-				style="padding:56.25% 0 0 0;position:relative;"
-			>
-				<div
-					class="wistia_responsive_wrapper"
-					style="height:100%;left:0;position:absolute;top:0;width:100%;"
+		<!-- section 3: video -->
+		<div class="mx-auto w-full max-w-screen-xl px-2">
+			<SectionTitle title="Watch Ladies Play Flappy Bunny" />
+			<div class="mx-auto mt-12 w-full max-w-[800px]">
+				<script is:inline src="https://fast.wistia.com/embed/medias/pj4j6y2xrr.jsonp" async
+				></script>
+				<script is:inline src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div
+					class="wistia_responsive_padding"
+					style="padding:56.25% 0 0 0;position:relative;"
 				>
 					<div
-						class="wistia_embed wistia_async_pj4j6y2xrr seo=true videoFoam=true"
-						style="height:100%;position:relative;width:100%"
+						class="wistia_responsive_wrapper"
+						style="height:100%;left:0;position:absolute;top:0;width:100%;"
 					>
 						<div
-							class="wistia_swatch"
-							style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"
+							class="wistia_embed wistia_async_pj4j6y2xrr seo=true videoFoam=true"
+							style="height:100%;position:relative;width:100%"
 						>
-							<img
-								src="https://fast.wistia.com/embed/medias/pj4j6y2xrr/swatch"
-								style="filter:blur(5px);height:100%;object-fit:contain;width:100%;"
-								alt=""
-								aria-hidden="true"
-								onload="this.parentNode.style.opacity=1;"
-							/>
+							<div
+								class="wistia_swatch"
+								style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"
+							>
+								<img
+									src="https://fast.wistia.com/embed/medias/pj4j6y2xrr/swatch"
+									style="filter:blur(5px);height:100%;object-fit:contain;width:100%;"
+									alt=""
+									aria-hidden="true"
+									onload="this.parentNode.style.opacity=1;"
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<!-- section 4: icons -->
+		<div class="mx-auto max-w-screen-xl px-2">
+			<SectionTitle title="More App Features" />
+			<div
+				class="mx-auto mt-12 flex w-full max-w-screen-xl flex-wrap items-center rounded-2xl bg-white py-8 sm:justify-around"
+			>
+				<AppIcon src={dial} text="Built-in Buzz & Twirl Combos" />
+				<AppIcon src={music} text="Sync With Music" />
+				<AppIcon src={sound} text="Siri Voice Commands" />
+				<AppIcon src={bulb} text="Design Your Own Routines" />
+				<AppIcon src={reverse} text="Reverse Twirl Direction" />
 			</div>
 		</div>
 	</div>

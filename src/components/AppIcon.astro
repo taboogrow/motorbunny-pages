@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+
+type Props = {
+	src: ImageMetadata;
+	text: string;
+};
+
+const { src, text } = Astro.props;
+---
+
+<article class="mx-auto flex max-w-[180px] flex-col items-center justify-center gap-4 p-2">
+	<Image class="max-w-[60px]" src={src} alt="" />
+	<span class="mx-auto max-w-[15ch] text-balance text-center text-lg font-bold text-black"
+		>{text}</span
+	>
+</article>

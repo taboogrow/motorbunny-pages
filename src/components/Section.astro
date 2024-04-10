@@ -1,4 +1,16 @@
-<section class="mx-auto max-w-[1440px] px-2 py-12">
+---
+type Props = {
+	bg?: 'light' | 'neutral';
+};
+
+const { bg } = Astro.props;
+---
+
+<section
+	class={`${
+		bg === 'light' ? 'bg-white' : bg === 'neutral' ? 'bg-secondary' : ''
+	} max-w-[1440px] mx-auto w-full px-2 py-12`}
+>
 	<div class="mx-auto w-full max-w-screen-xl">
 		<slot />
 	</div>

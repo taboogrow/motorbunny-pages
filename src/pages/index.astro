@@ -6,9 +6,13 @@ import CompanyLogos from '../components/CompanyLogos.astro';
 import VideoComp from '../sections/VideoComp.astro';
 import FeatureComp from '../sections/FeatureComp.astro';
 import AppFeatures from '../sections/AppFeatures.astro';
+import Attachments from '../sections/Attachments.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+	title="Motorbunny vs. Sybian - 2024 Comparison"
+	description="Why Motorbunny beats Sybian. More power, more features, and packed with cutting edge technology."
+>
 	<Header />
 	<Hero subtitle="Why Motorbunny Beats Sybian (2024)" />
 	<CompanyLogos />
@@ -16,5 +20,6 @@ import AppFeatures from '../sections/AppFeatures.astro';
 		<VideoComp />
 		<FeatureComp />
 		<AppFeatures />
+		<Attachments />
 	</main>
 </Layout>
