@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+
+type Props = {
+	title: string;
+	subtitle?: string;
+	src?: ImageMetadata;
+};
+
+const { title, subtitle, src } = Astro.props;
+---
+
+<div class="w-full space-y-4 text-center">
+	<h2
+		class="mx-auto flex max-w-[800px] items-center justify-center gap-x-4 text-balance text-5xl font-bold"
+	>
+		<span class={src ? 'mt-4' : ''}>{title}</span>
+		{src && <Image class="max-w-[300px]" src={src} alt="" />}
+	</h2>
+	{subtitle && <p class="mt-4 text-3xl font-semibold text-primary">{subtitle}</p>}
+</div>
+
+<style>
+	h2 {
+		text-shadow: 4px 4px 0px #ff7992;
+	}
+</style>

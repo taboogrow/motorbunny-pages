@@ -14,27 +14,30 @@ const { subtitle = 'Frottage sex enhancer' } = Astro.props;
 
 <section>
 	<div
-		class="mx-auto flex w-full max-w-[1440px] bg-cover bg-center bg-no-repeat px-2 md:min-h-[847px] md:bg-[url('/hero-image-desktop.jpg')]"
+		class="mx-auto flex w-full max-w-[1440px] flex-col bg-cover bg-center bg-no-repeat px-2 md:min-h-[847px] md:bg-[url('/hero-image-desktop.jpg')]"
 	>
+		<div class="mx-auto w-full max-w-screen-xl">
+			<h1 class="flex flex-col items-center gap-x-4 text-4xl font-bold sm:text-7xl md:flex-row">
+				<Image src={logo} alt="motorbunny logo" />
+				<span class="mt-12 uppercase">vs sybian</span>
+			</h1>
+			<span
+				class="w-full text-center text-xl font-semibold uppercase text-white sm:text-3xl md:text-left"
+				>{subtitle}</span
+			>
+		</div>
 		<div class="mx-auto grid w-full max-w-screen-xl md:grid-cols-2 md:self-stretch">
 			<div
-				class="mx-auto mt-8 flex flex-col items-baseline justify-center text-center md:mt-0 md:text-left"
+				class="mx-auto mt-8 flex w-full flex-col items-baseline justify-center text-center md:mt-0 md:text-left"
 			>
-				<h1 class="flex flex-col text-4xl font-bold sm:text-7xl">
-					<Image src={logo} alt="motorbunny logo" />
-					<span class="uppercase">vs sybian</span>
-				</h1>
-				<span class="w-full text-center text-xl uppercase text-primary sm:text-2xl md:text-left"
-					>{subtitle}</span
-				>
 				<div class="hidden md:block">
 					<HeroCallouts />
 					<a href="#watch" class="btn btn-primary btn-lg mt-14">Watch How It Works</a>
 				</div>
 			</div>
-			<div class="relative hidden w-full md:block">
+			<!-- <div class="relative hidden w-full md:block">
 				<Image class="absolute right-0 top-0" src={avn} alt="avn award badge" />
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<Image
@@ -47,3 +50,10 @@ const { subtitle = 'Frottage sex enhancer' } = Astro.props;
 		<a href="#watch" class="btn btn-primary btn-lg mt-8">Watch How It Works</a>
 	</div>
 </section>
+
+<style>
+	h1,
+	span {
+		font-family: 'Montserrat', sans-serif;
+	}
+</style>

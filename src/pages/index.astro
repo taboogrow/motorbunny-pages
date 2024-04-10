@@ -3,11 +3,18 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../sections/Hero.astro';
 import CompanyLogos from '../components/CompanyLogos.astro';
+import VideoComp from '../sections/VideoComp.astro';
+import FeatureComp from '../sections/FeatureComp.astro';
+import AppFeatures from '../sections/AppFeatures.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<Header />
 	<Hero subtitle="Why Motorbunny Beats Sybian (2024)" />
 	<CompanyLogos />
-	<main></main>
+	<main>
+		<VideoComp />
+		<FeatureComp />
+		<AppFeatures />
+	</main>
 </Layout>
