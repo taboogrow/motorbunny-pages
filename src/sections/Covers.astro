@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import Section from '../components/Section.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+// assets
+import model from '../assets/images/covers.png';
+import cover1 from '../assets/images/cover-1.jpg';
+import cover2 from '../assets/images/cover-2.jpg';
+import cover3 from '../assets/images/cover-3.jpg';
+import cover4 from '../assets/images/cover-4.jpg';
+import cover5 from '../assets/images/cover-5.jpg';
+import cover6 from '../assets/images/cover-6.jpg';
+---
+
+<Section bg="light">
+	<SectionTitle color="dark" title="6 Different Covers" subtitle="Customize to Your Wild Style" />
+	<div class="mt-12 grid sm:grid-cols-2">
+		<div class="flex items-center justify-center">
+			<Image src={model} alt="" />
+		</div>
+		<div>
+			<div class="grid grid-cols-3">
+				<Image src={cover1} alt="motorbunny cover" />
+				<Image src={cover2} alt="motorbunny cover" />
+				<Image src={cover3} alt="motorbunny cover" />
+				<Image src={cover4} alt="motorbunny cover" />
+				<Image src={cover5} alt="motorbunny cover" />
+				<Image src={cover6} alt="motorbunny cover" />
+			</div>
+			<div class="flex items-center justify-center gap-x-4 text-4xl">
+				<span>❌</span>
+				<span class="font-bold text-black">Sybian</span>
+				<span class="text-primary">Only 4 Colors</span>
+			</div>
+		</div>
+	</div>
+</Section>
