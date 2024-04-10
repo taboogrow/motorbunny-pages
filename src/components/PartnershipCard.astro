@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logos/motorbunny-logo-pink.png';
+
+type Props = {
+	logoSrc: ImageMetadata;
+	imgSrc: ImageMetadata;
+};
+
+const { logoSrc, imgSrc } = Astro.props;
+---
+
+<div class="mx-auto flex w-full max-w-[450px] flex-col items-center justify-center space-y-6">
+	<Image src={logoSrc} alt="bad dragon logo" />
+	<Image class="rounded-2xl shadow-2xl" src={imgSrc} alt="bad dragon" />
+	<div class="w-full">
+		<div class="flex w-full items-center justify-between">
+			<Image class="max-w-[200px]" src={logo} alt="motorbunny logo" />
+			<span class="text-3xl">✅</span>
+		</div>
+		<div class="flex w-full justify-between text-3xl font-bold">
+			<span>Sybian</span>
+			<span>❌</span>
+		</div>
+	</div>
+</div>

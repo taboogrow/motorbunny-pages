@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+// components
+import Section from '../components/Section.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import PartnershipCard from '../components/PartnershipCard.astro';
+// assets
+import badDragonLogo from '../assets/logos/bad-dragon-logo.png';
+import badDragonImg from '../assets/images/bad-dragon-01.jpg';
+import docJohnsonLogo from '../assets/logos/docjohnson-logo.png';
+import docJohnsonImg from '../assets/images/docjohnson-01.png';
+---
+
+<Section bg="neutral">
+	<SectionTitle title="Exclusive Partnerships" />
+	<div class="mt-12 grid w-full place-items-center gap-x-2 gap-y-8 sm:grid-cols-2">
+		<PartnershipCard logoSrc={badDragonLogo} imgSrc={badDragonImg} />
+		<PartnershipCard logoSrc={docJohnsonLogo} imgSrc={docJohnsonImg} />
+	</div>
+</Section>
