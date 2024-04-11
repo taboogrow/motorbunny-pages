@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+// components
+import Section from '../components/Section.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import ReviewCard from '../components/ReviewCard.astro';
+// assets
+import review1 from '../assets/images/review-1.jpg';
+import review2 from '../assets/images/review-2.jpg';
+import review3 from '../assets/images/review-3.jpg';
+import review4 from '../assets/images/review-4.jpg';
+import judgeme from '../assets/images/judgeme.jpg';
+---
+
+<Section>
+	<SectionTitle title="What Our Customers Say" />
+	<div class="mt-4">
+		<Image class="mx-auto" src={judgeme} alt="" />
+	</div>
+	<div class="mt-12 flex flex-wrap items-center justify-center gap-12">
+		<ReviewCard
+			src={review1}
+			body="I purchased the motor bunny two weeks ago and my wife has used it several times, each time she uses it she orgasms so hard that I have to help her off the machine and it takes about 10 minutes for her to be able to stand without trembling. Wish I would have bought one years earlier."
+			title="She Loves It"
+			name="S.R. - Colorado USA"
+		/>
+		<ReviewCard
+			src={review2}
+			body="I purchased this on a whim, for a surprise for my wife. She’s adventurous but not an exhibitionist so I wasn’t sure what she would think. I read about he 45 day guarantee, and I figured if it didn’t work out I wasn’t out too much money and if it lived up to the hype then it would be worth every penny. Needless to say, we will not be returning it."
+			title="Get a rain coat"
+			name="L.S. - Arizona, USA"
+		/>
+		<ReviewCard
+			src={review3}
+			body="I have never seen a woman more excited than when I showed her the picture of my new Motor Bunny, except maybe the look on her face when she rode it for it for the first time! It’s my new favorite accessory."
+			title="A great addition to my collection"
+			name="A.L. - Florida, USA"
+		/>
+		<ReviewCard
+			src={review4}
+			body="There’s orgasms and then there’s ORGASMS. This thing sent my girl to the other side. I myself have turned the clock back in age and experience with the jiggle butt attachment; once it hits 11 I become a minuteman. This is very well built, the design, ergonomics, the engineering; it’s biblical in it’s euphoria."
+			title="We have met God"
+			name="M.M. - Texas, USA"
+		/>
+	</div>
+</Section>

@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import stars from '../assets/icons/5-stars-pink.png';
+import checkmark from '../assets/icons/checkmark-icon.png';
+
+type Props = {
+	src: ImageMetadata;
+	title: string;
+	body: string;
+	name: string;
+};
+
+const { src, title, body, name } = Astro.props;
+---
+
+<article
+	class="grid max-w-[600px] overflow-hidden rounded-2xl bg-secondary shadow-2xl sm:grid-cols-[1fr_3fr]"
+>
+	<div>
+		<Image class="h-[330px] w-full object-cover object-center sm:object-left" src={src} alt="" />
+	</div>
+	<div class="flex flex-col justify-between gap-8 p-6">
+		<div class="space-y-2">
+			<Image src={stars} alt="" />
+			<div class="flex items-center gap-x-4">
+				<span>{name}</span>
+				<Image class="max-w-[25px]" src={checkmark} alt="" />
+			</div>
+		</div>
+		<div class="space-y-2">
+			<span class="text-xl font-bold">{title}</span>
+			<p>
+				{body}
+			</p>
+		</div>
+	</div>
+</article>
