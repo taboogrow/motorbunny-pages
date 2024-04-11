@@ -12,7 +12,13 @@ const { logoSrc, imgSrc } = Astro.props;
 
 <div class="mx-auto flex w-full max-w-[450px] flex-col items-center justify-center space-y-6">
 	<Image src={logoSrc} alt="bad dragon logo" />
-	<Image class="rounded-2xl shadow-2xl" src={imgSrc} alt="bad dragon" />
+	<div>
+		<Image
+			class="h-[450px] rounded-2xl object-cover object-center shadow-2xl"
+			src={imgSrc}
+			alt="bad dragon"
+		/>
+	</div>
 	<div class="w-full">
 		<div class="flex w-full items-center justify-between">
 			<Image class="max-w-[200px]" src={logo} alt="motorbunny logo" />

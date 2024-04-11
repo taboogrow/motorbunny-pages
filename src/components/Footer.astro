@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logos/mb-icon-logo.png';
+---
+
+<footer class="py-8">
+	<div class="flex w-full flex-col items-center justify-center gap-y-4">
+		<Image src={logo} alt="motorbunny icon logo" />
+		<div class="flex gap-x-4">
+			<a class="link text-xs" href="#">Privacy Policy</a>
+			<a class="link text-xs" href="#">Terms of Service</a>
+		</div>
+	</div>
+</footer>
