@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+import stars from '../assets/icons/5-stars-pink.png';
+import klarna from '../assets/images/klarna.jpg';
+
+type Props = {
+	imgSrc: ImageMetadata;
+	logoSrc: ImageMetadata;
+	subtitle: string;
+	reviews: number;
+	description: string;
+	price: number;
+	compareAt: number;
+	items: string[];
+	url: string;
+};
+
+const { imgSrc, logoSrc, subtitle, reviews, description, price, compareAt, items, url } =
+	Astro.props;
+---
+
+<article class="grid w-full sm:grid-cols-2">
+	<div class="relative">
+		<Image class="mx-auto w-full max-w-[500px] overflow-hidden rounded-2xl" src={imgSrc} alt="" />
+		{
+			compareAt && (
+				<div class="absolute -top-1 right-[20%] flex flex-col bg-primary px-2 py-4 text-2xl font-bold text-black">
+					<span>SAVE</span>
+					<span>${compareAt - price}</span>
+				</div>
+			)
+		}
+	</div>
+	<div class="flex flex-col p-2">
+		<div>
+			<Image src={logoSrc} alt="" />
+			<span class="text-3xl font-bold">{subtitle}</span>
+		</div>
+		<div class="mt-4 flex gap-x-4">
+			<Image src={stars} alt="" />
+			<span>{reviews} reviews</span>
+		</div>
+		<p class="mt-4">{description}</p>
+		<div class="mt-4 flex gap-x-4 text-4xl">
+			<span class="font-bold text-primary">${price}</span>
+			<span class="line-through">${compareAt}</span>
+		</div>
+		<div class="mt-4 flex gap-8">
+			<a href={url} class="btn btn-primary btn-lg">BUY NOW</a>
+			<Image src={klarna} alt="klarna payments" />
+		</div>
+		<div
+			tabindex="0"
+			class="collapse collapse-plus mt-4 max-w-[400px] border border-primary bg-none text-primary"
+		>
+			<div class="collapse-title text-xl font-bold">What's inside the box?</div>
+			<div class="collapse-content">
+				<ul>
+					{items.map((item) => <li>{item}</li>)}
+				</ul>
+			</div>
+		</div>
+	</div>
+</article>

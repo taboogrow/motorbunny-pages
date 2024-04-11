@@ -14,7 +14,7 @@ const { src, title, body, name } = Astro.props;
 ---
 
 <article
-	class="grid max-w-[600px] overflow-hidden rounded-2xl bg-secondary shadow-2xl sm:grid-cols-[1fr_3fr]"
+	class="grid max-w-[600px] overflow-hidden rounded-2xl bg-secondary shadow-2xl sm:max-h-[330px] sm:grid-cols-[1fr_3fr]"
 >
 	<div>
 		<Image class="h-[330px] w-full object-cover object-center sm:object-left" src={src} alt="" />
@@ -29,7 +29,7 @@ const { src, title, body, name } = Astro.props;
 		</div>
 		<div class="space-y-2">
 			<span class="text-xl font-bold">{title}</span>
-			<p>
+			<p class="text-ellipsis">
 				{body}
 			</p>
 		</div>

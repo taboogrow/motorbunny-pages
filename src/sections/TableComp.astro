@@ -1,0 +1,86 @@
+---
+import { Image } from 'astro:assets';
+import Section from '../components/Section.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+// assets
+import original from '../assets/logos/mb-original-logo.png';
+import link from '../assets/logos/mb-link-logo.png';
+import buck from '../assets/logos/mb-buck-logo.png';
+---
+
+<Section bg="neutral">
+	<SectionTitle title="3 Options To Fit Your Needs & Budget" />
+	<div class="mt-12">
+		<div class="overflow-x-auto">
+			<table class="table">
+				<!-- head -->
+				<thead class="text-white">
+					<tr>
+						<th></th>
+						<th>Price</th>
+						<th>Rotation RPM</th>
+						<th>Vibe RPM</th>
+						<th>Thrust RPM</th>
+						<th>Thrust PM</th>
+						<th>Male Add-Ons</th>
+						<th>Bluetooth App</th>
+						<th>Warranty</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- row 1 -->
+					<tr>
+						<th><Image class="max-w-[100px]" src={original} alt="" /></th>
+						<td>$899</td>
+						<td>0 to 160</td>
+						<td>7,000</td>
+						<td>N/A</td>
+						<td>N/A</td>
+						<td>✅</td>
+						<td>Optional</td>
+						<td>11 Years</td>
+					</tr>
+					<!-- row 2 -->
+					<tr class="hover">
+						<th><Image class="max-w-[100px]" src={link} alt="" /></th>
+						<td>$999</td>
+						<td>0 to 160</td>
+						<td>N/A</td>
+						<td>N/A</td>
+						<td>N/A</td>
+						<td>✅</td>
+						<td>Optional</td>
+						<td>11 Years</td>
+					</tr>
+					<!-- row 3 -->
+					<tr>
+						<th><Image class="max-w-[80px]" src={buck} alt="" /></th>
+						<td>$1,549</td>
+						<td>N/A</td>
+						<td>N/A</td>
+						<td>N/A</td>
+						<td>✅</td>
+						<td>✅</td>
+						<td>Optional</td>
+						<td>11 Years</td>
+					</tr>
+					<!-- row 4 -->
+					<tr>
+						<th>Sybian</th>
+						<td>$1,495</td>
+						<td>0 to 150</td>
+						<td>6,000</td>
+						<td>N/A</td>
+						<td>N/A</td>
+						<td>❌</td>
+						<td>❌</td>
+						<td>5 Years</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="mt-4 text-primary md:hidden">
+			<span>Scroll for more info ➡️</span>
+		</div>
+	</div>
+</Section>
