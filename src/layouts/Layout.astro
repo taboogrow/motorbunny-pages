@@ -17,7 +17,24 @@ const { title, description } = Astro.props;
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
 		<!-- favicon -->
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<!-- <meta property="og:url" content={permalink} /> -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/mb-vs-sybian-social.jpg" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<!-- <meta property="twitter:url" content={permalink} /> -->
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content="/mb-vs-sybian-social.jpg" />
 	</head>
 	<body class="min-h-screen text-base-100">
 		<slot />

@@ -1,12 +1,14 @@
 ---
 type Props = {
 	bg?: 'light' | 'neutral';
+	id?: string;
 };
 
-const { bg } = Astro.props;
+const { bg, id } = Astro.props;
 ---
 
 <section
+	id={id}
 	class={`${
 		bg === 'light' ? 'bg-white' : bg === 'neutral' ? 'bg-secondary' : ''
 	} max-w-[1440px] mx-auto w-full px-2 py-12`}

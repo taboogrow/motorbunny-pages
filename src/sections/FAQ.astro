@@ -1,0 +1,46 @@
+---
+import Section from '../components/Section.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+---
+
+<Section>
+	<SectionTitle title="FAQ" />
+	<div class="mx-auto mt-12 max-w-[600px] space-y-8 text-black">
+		<div class="collapse collapse-plus bg-primary">
+			<input type="radio" name="my-accordion-3" />
+			<div class="collapse-title text-xl font-semibold">What is your return policy?</div>
+			<div class="collapse-content">
+				<p>
+					45 Day “Bunny-Back” Guarantee! If you are not completely satisfied we will refund your
+					money, minus a $199 storage and inspection fee and a flat rate of $35 for return shipping
+					for Continental US customers.Full Details <a href="https://motorbunny.com/pages/warranty"
+						>here</a
+					>.
+				</p>
+			</div>
+		</div>
+		<div class="collapse collapse-plus bg-primary">
+			<input type="radio" name="my-accordion-3" />
+			<div class="collapse-title text-xl font-semibold">
+				Which geographies are eligible for free shipping?
+			</div>
+			<div class="collapse-content">
+				<p>
+					Continental United States. Full details <a
+						href="https://motorbunny.com/pages/shipping-and-delivery">here</a
+					>.
+				</p>
+			</div>
+		</div>
+		<div class="collapse collapse-plus bg-primary">
+			<input type="radio" name="my-accordion-3" />
+			<div class="collapse-title text-xl font-semibold">What is your warranty?</div>
+			<div class="collapse-content">
+				<p>
+					11 year warranty for defects and workmanship in this product for non-commercial use. Full
+					Details <a href="https://motorbunny.com/pages/warranty-details">here</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+</Section>

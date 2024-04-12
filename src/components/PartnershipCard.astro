@@ -10,16 +10,16 @@ type Props = {
 const { logoSrc, imgSrc } = Astro.props;
 ---
 
-<div class="mx-auto flex w-full max-w-[450px] flex-col items-center justify-center space-y-6">
-	<Image src={logoSrc} alt="bad dragon logo" />
-	<div>
-		<Image
-			class="h-[450px] rounded-2xl object-cover object-center shadow-2xl"
-			src={imgSrc}
-			alt="bad dragon"
-		/>
+<div
+	class="mx-auto flex h-full w-full max-w-[450px] flex-col items-center justify-center overflow-hidden rounded-2xl bg-black"
+>
+	<div class="p-6">
+		<Image src={logoSrc} alt="bad dragon logo" />
 	</div>
-	<div class="w-full">
+	<div>
+		<Image class="h-[450px] object-cover object-center shadow-2xl" src={imgSrc} alt="bad dragon" />
+	</div>
+	<div class="w-full p-8">
 		<div class="flex w-full items-center justify-between">
 			<Image class="max-w-[200px]" src={logo} alt="motorbunny logo" />
 			<span class="text-3xl">✅</span>

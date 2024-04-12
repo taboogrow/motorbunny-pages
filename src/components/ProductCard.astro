@@ -47,7 +47,7 @@ const {
 	<div class="flex flex-col p-2">
 		<div>
 			<Image src={logoSrc} alt="" />
-			<span class="text-3xl font-bold">{subtitle}</span>
+			<span class="text-2xl font-semibold sm:text-3xl">{subtitle}</span>
 		</div>
 		<div class="mt-4 flex gap-x-4">
 			<Image src={stars} alt="" />
@@ -56,7 +56,7 @@ const {
 		<p class="mt-4">{description}</p>
 		{
 			attachmentSrc && (
-				<div class="mt-4 flex items-center gap-2">
+				<div class="mt-4 flex flex-wrap items-center gap-2">
 					<Image class="max-w-[180px]" src={attachmentSrc} alt="" />
 					<span>{attachmentText}</span>
 				</div>
@@ -66,7 +66,7 @@ const {
 			<span class="font-bold text-primary">${price}</span>
 			{compareAt && <span class="line-through">${compareAt}</span>}
 		</div>
-		<div class="mt-4 flex items-center gap-4">
+		<div class="mt-4 flex flex-col-reverse flex-wrap items-start gap-4 sm:flex-row">
 			<a href={url} class="btn btn-primary btn-lg">BUY NOW</a>
 			<Image src={klarna} alt="klarna payments" />
 		</div>

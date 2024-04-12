@@ -1,0 +1,20 @@
+---
+import pack from '../assets/icons/package-icon.png';
+import thumb from '../assets/icons/thumb-icon.png';
+import dollar from '../assets/icons/dollar-icon.png';
+import award from '../assets/icons/award-icon.png';
+import happy from '../assets/icons/happy-icon.png';
+import IconCard from './IconCard.astro';
+---
+
+<section class="mx-auto max-w-[1440px]">
+	<div class="w-full bg-primary py-8">
+		<div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-around text-black">
+			<IconCard icon={pack} text="Free Shipping" />
+			<IconCard icon={thumb} text="Discreet Ordering" />
+			<IconCard icon={dollar} text="Buy now, Pay later" />
+			<IconCard icon={award} text="30-Day Guarantee" />
+			<IconCard icon={happy} text="Friendly Support" />
+		</div>
+	</div>
+</section>

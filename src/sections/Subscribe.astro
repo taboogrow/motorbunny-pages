@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import bgdesktop from '../assets/images/subscribe-bg-desktop.jpg';
+import bgmobile from '../assets/images/subscribe-bg-mobile.jpg';
+import SectionTitle from '../components/SectionTitle.astro';
+---
+
+<section class="mx-auto w-full max-w-[1440px]">
+	<div class="relative">
+		<Image class="hidden md:block" src={bgdesktop} alt="" />
+		<Image class="md:hidden" src={bgmobile} alt="" />
+		<div
+			class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-center justify-center space-y-6"
+		>
+			<SectionTitle title="Feeling Lucky?" subtitle="Spin to Win a FREE Motorbunny" />
+			<button class="btn btn-primary btn-wide">WIN A MOTORBUNNY</button>
+		</div>
+	</div>
+</section>
