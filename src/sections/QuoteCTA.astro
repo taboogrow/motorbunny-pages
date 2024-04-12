@@ -5,11 +5,13 @@ import bgdesktop from '../../public/mb-model.jpg';
 import bgmobile from '../assets/images/mb-model-mobile.jpg';
 ---
 
-<section class="max-w-[1440px]">
+<section class="mx-auto max-w-[1440px]">
 	<div class="relative">
 		<Image class="hidden md:block" src={bgdesktop} alt="" />
 		<Image class="md:hidden" src={bgmobile} alt="" />
-		<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
+		<div
+			class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform md:top-[200px]"
+		>
 			<SectionTitle
 				color="dark"
 				title=" I've never climaxed so hard or so many times in my life."
