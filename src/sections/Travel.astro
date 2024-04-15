@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+import Section from '../components/Section.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import camo from '../assets/images/camo-backpack.gif';
+import cruiser from '../assets/images/cruiser-bag.gif';
+import roadcase from '../assets/images/road-case.gif';
+---
+
+<Section bg="light">
+	<SectionTitle title="Travels in Three Styles" color="dark" />
+	<div class="mt-16 grid place-items-center gap-8 sm:grid-cols-3">
+		<Image src={camo} alt="camo travel backpack" />
+		<Image src={cruiser} alt="travel cruiser bag" />
+		<Image src={roadcase} alt="travel road case" />
+	</div>
+</Section>
