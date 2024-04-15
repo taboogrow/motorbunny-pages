@@ -15,10 +15,12 @@ const { subtitle } = Astro.props;
 	<div
 		class="mx-auto flex w-full max-w-[1440px] flex-col bg-cover bg-center bg-no-repeat px-2 md:min-h-[847px] md:bg-[url('/hero-image-desktop.jpg')]"
 	>
-		<div class="mx-auto w-full max-w-screen-xl">
-			<h1 class="flex flex-col items-center gap-x-4 text-4xl font-bold sm:text-7xl md:flex-row">
+		<div class="mx-auto mt-8 w-full max-w-screen-xl md:px-8 xl:px-0">
+			<h1
+				class="flex flex-col items-center gap-x-4 text-4xl font-bold sm:text-7xl lg:flex-row lg:items-center"
+			>
 				<Image class="max-w-[250px] md:max-w-none" src={logo} alt="motorbunny logo" />
-				<span class="uppercase md:mt-12">vs sybian</span>
+				<span class="uppercase lg:mt-12">vs sybian</span>
 			</h1>
 			<p
 				class="mt-2 w-full text-balance text-center text-2xl uppercase text-white sm:text-3xl md:text-left"
@@ -32,7 +34,7 @@ const { subtitle } = Astro.props;
 		</div>
 	</div>
 	<Image
-		class="mt-8 h-[520px] w-full object-cover object-center md:hidden"
+		class="mt-8 h-[500px] w-full object-cover object-center md:hidden"
 		src={heroMobile}
 		alt="motorbunny"
 	/>
