@@ -1,8 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import logo from '../assets/logos/motorbunny-logo-pink.png';
-import avn from '../assets/images/avn-badge.png';
 import heroMobile from '../assets/images/hero-image-mobile.jpg';
+import logo from '../assets/logos/motorbunny-logo-pink.png';
 import HeroCallouts from '../components/HeroCallouts.astro';
 
 type Props = {
@@ -26,25 +25,16 @@ const { subtitle } = Astro.props;
 			>
 				{subtitle}
 			</p>
-		</div>
-		<div class="mx-auto hidden w-full max-w-screen-xl md:grid md:grid-cols-2 md:self-stretch">
-			<div
-				class="mx-auto mt-8 flex w-full flex-col items-baseline justify-center text-center md:mt-0 md:text-left"
-			>
-				<div>
-					<HeroCallouts />
-					<a href="#watch" class="btn btn-primary btn-lg mt-14 uppercase">Watch The Comparison</a>
-				</div>
+			<div class="hidden md:block">
+				<HeroCallouts />
+				<a href="#watch" class="btn btn-primary btn-lg mt-14 uppercase">Watch The Comparison</a>
 			</div>
-			<!-- <div class="relative hidden w-full md:block">
-				<Image class="absolute right-0 top-0" src={avn} alt="avn award badge" />
-			</div> -->
 		</div>
 	</div>
 	<Image
-		class="mt-8 w-full md:hidden"
+		class="mt-8 h-[520px] w-full object-cover object-center md:hidden"
 		src={heroMobile}
-		alt="CockBlock frot toy a sex toy for gay men"
+		alt="motorbunny"
 	/>
 	<div class="flex flex-col items-center justify-center px-2 md:hidden">
 		<HeroCallouts />
