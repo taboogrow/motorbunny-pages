@@ -30,13 +30,19 @@ const { title, subtitle, src, color } = Astro.props;
 	</h2>
 	{
 		subtitle && (
-			<p class="mt-4 text-balance text-2xl font-semibold text-primary sm:text-3xl">{subtitle}</p>
+			<p
+				class={`${
+					color === 'light' ? 'text-white' : ''
+				} 'mt-4 sm:text-3xl' text-balance text-2xl font-semibold text-primary`}
+			>
+				{subtitle}
+			</p>
 		)
 	}
 </div>
 
 <style>
 	h2 {
-		text-shadow: 4px 4px 0px #ff7992;
+		text-shadow: 3px 3px 0px #ff7992;
 	}
 </style>

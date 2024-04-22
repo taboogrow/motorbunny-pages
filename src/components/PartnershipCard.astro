@@ -5,9 +5,10 @@ import logo from '../assets/logos/motorbunny-logo-pink.png';
 type Props = {
 	logoSrc: ImageMetadata;
 	imgSrc: ImageMetadata;
+	comparison?: boolean;
 };
 
-const { logoSrc, imgSrc } = Astro.props;
+const { logoSrc, imgSrc, comparison } = Astro.props;
 ---
 
 <div
@@ -19,14 +20,18 @@ const { logoSrc, imgSrc } = Astro.props;
 	<div>
 		<Image class="h-[450px] object-cover object-center shadow-2xl" src={imgSrc} alt="bad dragon" />
 	</div>
-	<div class="w-full p-8">
-		<div class="flex w-full items-center justify-between">
-			<Image class="max-w-[200px]" src={logo} alt="motorbunny logo" />
-			<span class="text-3xl">✅</span>
-		</div>
-		<div class="flex w-full justify-between text-3xl font-bold">
-			<span>Sybian</span>
-			<span>❌</span>
-		</div>
-	</div>
+	{
+		comparison && (
+			<div class="w-full p-8">
+				<div class="flex w-full items-center justify-between">
+					<Image class="max-w-[200px]" src={logo} alt="motorbunny logo" />
+					<span class="text-3xl">✅</span>
+				</div>
+				<div class="flex w-full justify-between text-3xl font-bold">
+					<span>Sybian</span>
+					<span>❌</span>
+				</div>
+			</div>
+		)
+	}
 </div>

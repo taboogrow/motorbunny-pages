@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets';
+import box from '../assets/icons/package-icon-pink.png';
+import thumb from '../assets/icons/thumb-icon-pink.png';
+import dollar from '../assets/icons/dollar-icon-pink.png';
+import award from '../assets/icons/award-icon-pink.png';
+import happy from '../assets/icons/happy-icon-pink.png';
+---
+
+<section
+	class="mx-auto max-w-[1440px] bg-[url('/bad-dragon-ika-background.jpg')] bg-cover bg-center py-[50px] md:py-[100px]"
+>
+	<div class="flex flex-wrap items-center justify-around gap-y-4">
+		<div
+			class="flex flex-col items-center justify-center gap-2 rounded-xl bg-black/50 p-6 backdrop-blur-sm"
+		>
+			<Image class="max-w-[60px]" src={box} alt="package icon" />
+			<span class="max-w-[10ch] text-center text-xl text-primary">Free Shipping</span>
+		</div>
+		<div
+			class="flex flex-col items-center justify-center gap-2 rounded-xl bg-black/50 p-6 backdrop-blur-sm"
+		>
+			<Image class="max-w-[60px]" src={thumb} alt="package icon" />
+			<span class="max-w-[10ch] text-center text-xl text-primary">Discreet Delivery</span>
+		</div>
+		<div
+			class="flex flex-col items-center justify-center gap-2 rounded-xl bg-black/50 p-6 backdrop-blur-sm"
+		>
+			<Image class="max-w-[60px]" src={dollar} alt="package icon" />
+			<span class="max-w-[10ch] text-center text-xl text-primary">$0 Down Financing</span>
+		</div>
+		<div
+			class="flex flex-col items-center justify-center gap-2 rounded-xl bg-black/50 p-6 backdrop-blur-sm"
+		>
+			<Image class="max-w-[60px]" src={award} alt="package icon" />
+			<span class="max-w-[10ch] text-center text-xl text-primary">11-Year Warranty</span>
+		</div>
+		<div
+			class="flex flex-col items-center justify-center gap-2 rounded-xl bg-black/50 p-6 backdrop-blur-sm"
+		>
+			<Image class="max-w-[60px]" src={happy} alt="package icon" />
+			<span class="max-w-[10ch] text-center text-xl text-primary">45-Day Guarantee</span>
+		</div>
+	</div>
+</section>

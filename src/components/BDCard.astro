@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+
+const { name, src, alt, url } = Astro.props;
+---
+
+<article class="flex flex-col overflow-hidden rounded-xl">
+	<Image class="w-full" src={src} alt={alt} />
+	<div class="space-y-4 bg-secondary p-6">
+		<div>
+			<h2 class="text-xl font-bold">{name} Attachment</h2>
+			<p>made for Motorbunny</p>
+		</div>
+		<div class="flex items-end gap-2">
+			<span>starting at</span>
+			<span class="text-2xl text-primary">$105</span>
+		</div>
+		<div class="flex flex-wrap items-center gap-4">
+			<slot />
+			<div class="flex gap-2">
+				<span class="badge badge-outline badge-lg">large</span>
+				<span class="badge badge-outline badge-lg">small</span>
+			</div>
+		</div>
+		<a href={url} class="btn btn-primary w-full uppercase">view product</a>
+	</div>
+</article>
+
+<style>
+	article {
+		box-shadow: 4px 4px 0px #ff7992;
+	}
+</style>

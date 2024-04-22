@@ -1,21 +1,17 @@
 ---
 import { Image } from 'astro:assets';
-import img1 from '../assets/images/mb-feature-comp-01.jpg';
-import img2 from '../assets/images/mb-feature-comp-02.jpg';
-import img3 from '../assets/images/mb-feature-comp-03.jpg';
-import FeaturesList from '../components/FeaturesList.astro';
-import ImageWithText from '../components/ImageWithText.astro';
+import img1 from '../../assets/images/mb-feature-comp-01.jpg';
+import img2 from '../../assets/images/mb-feature-comp-02.jpg';
+import img3 from '../../assets/images/mb-feature-comp-03.jpg';
+import FeaturesList from '../../components/FeaturesList.astro';
 ---
 
-<section class="mx-auto max-w-[1440px] space-y-8 bg-secondary md:py-12">
+<section class="mx-auto max-w-[1440px] bg-primary md:py-12">
 	<div class="grid w-full sm:grid-cols-2">
 		<div class="order-2 md:order-1">
 			<FeaturesList
-				features={[
-					'#1 Award Winning Ride-On-Top Vibrator',
-					'45-Day Satisfaction Guarantee',
-					'...Goes All the Way to 11'
-				]}
+				features={['Hop On For Only $899', 'FREE Shipping*', '$0 Down Financing']}
+				compFeatures={['High Price of $1,375', 'No Financing Options']}
 			/>
 		</div>
 		<div class="order-1 w-full md:order-2">
@@ -26,7 +22,7 @@ import ImageWithText from '../components/ImageWithText.astro';
 			/>
 		</div>
 	</div>
-	<div class="grid w-full sm:grid-cols-2">
+	<div class="mt-12 grid w-full sm:grid-cols-2">
 		<div class="w-full">
 			<Image
 				class="h-full w-full object-cover md:rounded-br-2xl md:rounded-tr-2xl"
@@ -34,9 +30,12 @@ import ImageWithText from '../components/ImageWithText.astro';
 				alt="motorbunny"
 			/>
 		</div>
-		<FeaturesList features={['More Power & Rotation', '7,000 RPM Vibration', '150 RPM Rotation']} />
+		<FeaturesList
+			features={['More Power & Rotation', '7,000 RPM Vibration', '150 RPM Rotation']}
+			compFeatures={['Less Power & Vibration', 'Only 6,000 RPM Vibration', 'Only 150 RPM Rotation']}
+		/>
 	</div>
-	<div class="grid w-full sm:grid-cols-2">
+	<div class="mt-12 grid w-full sm:grid-cols-2">
 		<div class="order-2 md:order-1">
 			<FeaturesList
 				features={[
@@ -44,6 +43,7 @@ import ImageWithText from '../components/ImageWithText.astro';
 					'Digital App for Wireless and Long Distance Control',
 					'Premium Attachments & Accessories'
 				]}
+				compFeatures={['No Tie Ons for Bondage', 'No Digital App', 'Limited Attachments']}
 			/>
 		</div>
 		<div class="order-1 w-full md:order-2">

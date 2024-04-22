@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+import orochi from '../assets/images/bad-dragon-orochi-square-01.jpg';
+import unicorn from '../assets/images/bad-dragon-unicorn-lifestyle-square-01.jpg';
+import ika from '../assets/images/bad-dragon-ika-square-01.jpg';
+import flint from '../assets/images/bad-dragon-flint-square-01.jpg';
+---
+
+<section class="mx-auto max-w-[1440px]">
+	<div class="grid w-full grid-cols-2 sm:grid-cols-4">
+		<Image src={orochi} alt="bad dragon orochi with motorbunny" />
+		<Image src={unicorn} alt="bad dragon unicorn with motorbunny" />
+		<Image src={ika} alt="bad dragon ika with motorbunny" />
+		<Image src={flint} alt="bad dragon flint with motorbunny" />
+	</div>
+</section>

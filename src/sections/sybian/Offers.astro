@@ -1,8 +1,8 @@
 ---
-import ProductCard from '../components/ProductCard.astro';
-import Section from '../components/Section.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import Section from '../../components/Section.astro';
 // assets
-import giftset from '../assets/images/ultimate-gift-set.png';
+import original from '../assets/images/mb-original.jpg';
 import link from '../assets/images/mb-link.jpg';
 import buck from '../assets/images/mb-buck.jpg';
 import originalLogo from '../assets/logos/mb-original-logo.png';
@@ -14,23 +14,20 @@ import docjohnson from '../assets/logos/docjohnson-logo.png';
 <Section id="offers">
 	<div class="space-y-16">
 		<ProductCard
-			imgSrc={giftset}
-			price={1221}
-			subtitle="Ultimate Motorbunny Gift Set"
+			imgSrc={original}
+			price={899}
+			compareAt={1395}
+			logoSrc={originalLogo}
+			subtitle="with Regular Controller"
 			reviews={423}
-			description="The Ultimate Gift set perfect for the bunny in your life. Everything you need to hop on including the best selling premium attachments."
+			description="Motorbunny Original is the classic ride on top vibrator that's sure to rock your world. With tons of attachment options (for him and her) that both vibrate and rotate, app integration, games, and more, there's something here for everyone!"
 			url="https://motorbunny.com/products/motorbunny"
 			items={[
-				'Motorbunny Link Saddle Vibrator',
-				'1 Premium Silicone Mt. Gushmore Attachment',
-				'1 Premium Silicone "Lolli" Attachment',
-				'2 Covers',
-				'Nipple Clamps',
-				'Knee pad attachment',
-				'4 Regular Attachments (low, standard, large and larger cover)',
+				'Motorbunny Saddle Vibrator',
+				'4 Attachments (low, standard, large and larger cover)',
 				'2 Springs, 2 Rods, 2 Risers',
 				'Power Supply',
-				'Bluetooth Controller'
+				'Regular Controller'
 			]}
 		/>
 

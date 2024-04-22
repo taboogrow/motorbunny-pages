@@ -1,0 +1,75 @@
+---
+import { Image } from 'astro:assets';
+import orochi from '../assets/images/orochi-glow.jpg';
+import mystic from '../assets/images/mystic-glow.jpg';
+import flint from '../assets/images/flint-glow.jpg';
+import ika from '../assets/images/ika-glow.jpg';
+---
+
+<section class="mx-auto mt-8 max-w-[1440px] py-[64px]">
+	<div class="mx-auto flex w-full flex-wrap items-center justify-center gap-6">
+		<span class="text-3xl">Glow in the Dark Colors</span>
+		<div class="relative flex items-center justify-center gap-2">
+			<div class="swatch-1 static z-10 size-12 rounded-full"></div>
+			<div class="swatch-2 static z-10 size-12 rounded-full"></div>
+			<div class="swatch-3 static z-10 size-12 rounded-full"></div>
+			<div class="swatch-4 static z-10 size-12 rounded-full"></div>
+		</div>
+	</div>
+	<div class="mt-8 grid w-full grid-cols-2 sm:grid-cols-4">
+		<Image src={orochi} alt="bad dragon orochi with motorbunny" />
+		<Image src={mystic} alt="bad dragon unicorn with motorbunny" />
+		<Image src={ika} alt="bad dragon ika with motorbunny" />
+		<Image src={flint} alt="bad dragon flint with motorbunny" />
+	</div>
+</section>
+
+<style>
+	.swatch-1 {
+		background: #9ab7b5;
+		border: 3px solid #54fe38;
+		box-shadow:
+			0px 0px 196.43px #9ab7b5,
+			0px 0px 112.246px #9ab7b5,
+			0px 0px 65.4768px #9ab7b5,
+			0px 0px 32.7384px #9ab7b5,
+			0px 0px 9.35383px #9ab7b5,
+			0px 0px 4.67691px #9ab7b5;
+	}
+
+	.swatch-2 {
+		background: #dee0dd;
+		border: 3px solid #54fe38;
+		box-shadow:
+			0px 0px 196.43px #dee0dd,
+			0px 0px 112.246px #dee0dd,
+			0px 0px 65.4768px #dee0dd,
+			0px 0px 32.7384px #dee0dd,
+			0px 0px 9.35383px #dee0dd,
+			0px 0px 4.67691px #dee0dd;
+	}
+
+	.swatch-3 {
+		background: #08a6b7;
+		border: 3px solid #54fe38;
+		box-shadow:
+			0px 0px 130.954px #08a6b7,
+			0px 0px 74.8306px #08a6b7,
+			0px 0px 43.6512px #08a6b7,
+			0px 0px 21.8256px #08a6b7,
+			0px 0px 6.23588px #08a6b7,
+			0px 0px 3.11794px #08a6b7;
+	}
+
+	.swatch-4 {
+		background: #d58251;
+		border: 3px solid #54fe38;
+		box-shadow:
+			0px 0px 196.43px #d58251,
+			0px 0px 112.246px #d58251,
+			0px 0px 65.4768px #d58251,
+			0px 0px 32.7384px #d58251,
+			0px 0px 9.35383px #d58251,
+			0px 0px 4.67691px #d58251;
+	}
+</style>

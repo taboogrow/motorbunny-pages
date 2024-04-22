@@ -1,17 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Hero from '../sections/Hero.astro';
 import CompanyLogos from '../components/CompanyLogos.astro';
 import VideoComp from '../sections/VideoComp.astro';
-import FeatureComp from '../sections/FeatureComp.astro';
 import AppFeatures from '../sections/AppFeatures.astro';
 import Attachments from '../sections/Attachments.astro';
-import Partnerships from '../sections/Partnerships.astro';
 import Covers from '../sections/Covers.astro';
 import Reviews from '../sections/Reviews.astro';
-import TableComp from '../sections/TableComp.astro';
-import Offers from '../sections/Offers.astro';
 import HowItWorks from '../sections/HowItWorks.astro';
 import Footer from '../components/Footer.astro';
 import FAQ from '../sections/FAQ.astro';
@@ -19,6 +14,12 @@ import QuoteCTA from '../sections/QuoteCTA.astro';
 import ValueProps from '../components/ValueProps.astro';
 import Subscribe from '../sections/Subscribe.astro';
 import Travel from '../sections/Travel.astro';
+// sybian specific
+import Offers from '../sections/sybian/Offers.astro';
+import Hero from '../sections/sybian/Hero.astro';
+import FeatureComp from '../sections/sybian/FeatureComp.astro';
+import Partnerships from '../sections/sybian/Partnerships.astro';
+import TableComp from '../sections/sybian/TableComp.astro';
 ---
 
 <Layout
@@ -26,19 +27,20 @@ import Travel from '../sections/Travel.astro';
 	description="Why Motorbunny beats Sybian. More power, more features, and packed with cutting edge technology."
 >
 	<Header />
-	<Hero />
+	<Hero subtitle="Why Motorbunny Beats Sybian (2024)" />
 	<CompanyLogos />
 	<main>
+		<VideoComp />
 		<FeatureComp />
-		<HowItWorks />
-		<Attachments />
-		<Covers />
 		<AppFeatures />
+		<Attachments />
+		<Partnerships />
+		<Covers />
 		<Reviews />
-		<Travel />
 		<TableComp />
 		<Offers />
-		<Partnerships />
+		<Travel />
+		<HowItWorks />
 		<QuoteCTA />
 		<ValueProps />
 		<FAQ />

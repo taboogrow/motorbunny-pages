@@ -5,7 +5,7 @@ import klarna from '../assets/images/klarna.jpg';
 
 type Props = {
 	imgSrc: ImageMetadata;
-	logoSrc: ImageMetadata;
+	logoSrc?: ImageMetadata;
 	attachmentSrc?: ImageMetadata;
 	subtitle: string;
 	reviews: number;
@@ -46,7 +46,7 @@ const {
 	</div>
 	<div class="flex flex-col p-2">
 		<div>
-			<Image src={logoSrc} alt="" />
+			{logoSrc && <Image src={logoSrc} alt="" />}
 			<span class="text-2xl font-semibold sm:text-3xl">{subtitle}</span>
 		</div>
 		<div class="mt-4 flex gap-x-4">

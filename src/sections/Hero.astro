@@ -1,52 +1,128 @@
 ---
 import { Image } from 'astro:assets';
-import heroMobile from '../assets/images/hero-image-mobile.jpg';
-import logo from '../assets/logos/motorbunny-logo-pink.png';
-import HeroCallouts from '../components/HeroCallouts.astro';
+import heroMobile from '../assets/images/hero-02.png';
+import money from '../assets/icons/money-icon.png';
+import checkmark from '../assets/icons/checkmark-icon.png';
+import ribbon from '../assets/icons/ribbon-icon.png';
+import wireless from '../assets/icons/wireless-icon.png';
+import trophy from '../assets/icons/trophy-icon.png';
+import avn from '../assets/images/avn-badge.png';
 
 type Props = {
-	subtitle: string;
+	subtitle?: string;
 };
 
 const { subtitle } = Astro.props;
 ---
 
-<section class="pb-12 pt-8 md:pb-0 md:pt-0">
+<section class="pb-12 md:pb-0 md:pt-0">
 	<div
-		class="mx-auto flex w-full max-w-[1440px] flex-col bg-cover bg-center bg-no-repeat px-2 md:min-h-[847px] md:bg-[url('/hero-image-desktop.jpg')]"
+		class="relative mx-auto flex w-full max-w-[1440px] flex-col bg-cover bg-center bg-no-repeat px-2 md:min-h-[847px] md:bg-[url('/hero-image-desktop.jpg')]"
 	>
 		<div class="mx-auto mt-8 w-full max-w-screen-xl md:px-8 xl:px-0">
-			<h1
-				class="flex flex-col items-center gap-x-4 text-4xl font-bold sm:text-7xl lg:flex-row lg:items-center"
-			>
-				<Image class="max-w-[250px] md:max-w-none" src={logo} alt="motorbunny logo" />
-				<span class="uppercase lg:mt-12">vs sybian</span>
-			</h1>
+			<div class="flex items-center gap-x-8">
+				<h1
+					class="mx-auto max-w-[18ch] shrink text-balance text-center text-4xl font-bold sm:text-6xl md:text-left"
+				>
+					The Most Powerful Vibrator in the World
+				</h1>
+				<div class="hidden shrink-0 grow justify-center md:flex">
+					<Image class="" src={avn} alt="" />
+				</div>
+			</div>
 			<p
 				class="mt-2 w-full text-balance text-center text-2xl uppercase text-white sm:text-3xl md:text-left"
 			>
 				{subtitle}
 			</p>
 			<div class="hidden md:block">
-				<HeroCallouts />
-				<a href="#watch" class="btn btn-primary btn-lg mt-14 uppercase">Watch The Comparison</a>
+				<ul
+					class="flex list-none flex-col gap-y-2 text-2xl text-gray-300 sm:mt-8 md:gap-y-4 lg:mt-0 lg:text-3xl"
+				>
+					<li class="flex items-center gap-x-3">
+						<div>
+							<Image src={trophy} alt="money bag icon" />
+						</div>
+						<span>#1 Award Winning Sex Machine</span>
+					</li>
+					<li class="flex items-center gap-x-3">
+						<div>
+							<Image src={checkmark} alt="money bag icon" />
+						</div>
+						<span>45-Day Satisfaction Guarantee</span>
+					</li>
+					<li class="flex items-center gap-x-3">
+						<div>
+							<Image src={ribbon} alt="money bag icon" />
+						</div>
+						<span>11-Year Warranty & Quality Guarantee</span>
+					</li>
+					<li class="flex items-center gap-x-3">
+						<div>
+							<Image src={wireless} alt="money bag icon" />
+						</div>
+						<span>Wireless Control from Anywhere</span>
+					</li>
+					<li class="flex items-center gap-x-3">
+						<div>
+							<Image src={money} alt="money bag icon" />
+						</div>
+						<span>$0 Down Financing - Only $6 / day</span>
+					</li>
+				</ul>
+				<a href="#watch" class="btn btn-primary btn-lg mt-14 uppercase">Watch how it works</a>
 			</div>
 		</div>
 	</div>
-	<Image
-		class="mt-8 h-[500px] w-full object-cover object-center md:hidden"
-		src={heroMobile}
-		alt="motorbunny"
-	/>
+	<div class="relative">
+		<Image class="absolute left-4 top-4 max-w-[150px] md:hidden" src={avn} alt="" />
+		<Image
+			class="mt-8 h-[500px] w-full object-cover object-center md:hidden"
+			src={heroMobile}
+			alt="motorbunny"
+		/>
+	</div>
 	<div class="flex flex-col items-center justify-center px-2 md:hidden">
-		<HeroCallouts />
-		<a href="#watch" class="btn btn-primary btn-lg mt-8 uppercase">Watch The Comparison</a>
+		<ul
+			class="mt-8 flex list-none flex-col gap-y-2 text-lg text-gray-300 md:gap-y-4 lg:mt-14 lg:text-3xl"
+		>
+			<li class="flex items-center gap-x-3">
+				<div>
+					<Image src={trophy} alt="money bag icon" />
+				</div>
+				<span>#1 Award Winning Sex Machine</span>
+			</li>
+			<li class="flex items-center gap-x-3">
+				<div>
+					<Image src={checkmark} alt="money bag icon" />
+				</div>
+				<span>45-Day Satisfaction Guarantee</span>
+			</li>
+			<li class="flex items-center gap-x-3">
+				<div>
+					<Image src={ribbon} alt="money bag icon" />
+				</div>
+				<span>11-Year Warranty & Quality Guarantee</span>
+			</li>
+			<li class="flex items-center gap-x-3">
+				<div>
+					<Image src={wireless} alt="money bag icon" />
+				</div>
+				<span>Wireless Control from Anywhere</span>
+			</li>
+			<li class="flex items-center gap-x-3">
+				<div>
+					<Image src={money} alt="money bag icon" />
+				</div>
+				<span>$0 Down Financing - Only $6 / day</span>
+			</li>
+		</ul>
+		<a href="#watch" class="btn btn-primary btn-lg mt-8 uppercase">Watch how it works</a>
 	</div>
 </section>
 
 <style>
-	h1,
-	span {
-		font-family: 'Montserrat', sans-serif;
+	h1 {
+		text-shadow: 3px 3px 0px #ff7992;
 	}
 </style>
