@@ -4,12 +4,14 @@ import img1 from '../../assets/images/mb-feature-comp-01.jpg';
 import img2 from '../../assets/images/mb-feature-comp-02.jpg';
 import img3 from '../../assets/images/mb-feature-comp-03.jpg';
 import FeaturesList from '../../components/FeaturesList.astro';
+import logo from '../../assets/logos/motorbunny-logo-pink.png';
 ---
 
-<section class="mx-auto max-w-[1440px] bg-primary md:py-12">
+<section class="mx-auto max-w-[1440px] bg-secondary md:py-12">
 	<div class="grid w-full sm:grid-cols-2">
 		<div class="order-2 md:order-1">
 			<FeaturesList
+				logoSrc={logo}
 				features={['Hop On For Only $899', 'FREE Shipping*', '$0 Down Financing']}
 				compFeatures={['High Price of $1,375', 'No Financing Options']}
 			/>
@@ -31,6 +33,7 @@ import FeaturesList from '../../components/FeaturesList.astro';
 			/>
 		</div>
 		<FeaturesList
+			logoSrc={logo}
 			features={['More Power & Rotation', '7,000 RPM Vibration', '150 RPM Rotation']}
 			compFeatures={['Less Power & Vibration', 'Only 6,000 RPM Vibration', 'Only 150 RPM Rotation']}
 		/>
@@ -38,12 +41,13 @@ import FeaturesList from '../../components/FeaturesList.astro';
 	<div class="mt-12 grid w-full sm:grid-cols-2">
 		<div class="order-2 md:order-1">
 			<FeaturesList
+				logoSrc={logo}
 				features={[
-					'4 Tie On Steel Bolts for Bondage Attachment',
+					'4 Stainless Steel Eyelets for Bondage Play',
 					'Digital App for Wireless and Long Distance Control',
 					'Premium Attachments & Accessories'
 				]}
-				compFeatures={['No Tie Ons for Bondage', 'No Digital App', 'Limited Attachments']}
+				compFeatures={['No Tie Ons for Bondage', 'No Mobile App', 'Limited Attachments']}
 			/>
 		</div>
 		<div class="order-1 w-full md:order-2">
