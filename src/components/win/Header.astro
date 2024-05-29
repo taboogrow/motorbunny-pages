@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/logos/motorbunny-logo-pink-text.png';
+import logoSmall from '../../assets/logos/mb-icon-logo-pink.png';
+---
+
+<header class="sticky z-50 h-[76px] bg-secondary px-4 py-2 md:px-8">
+	<div class="flex items-center justify-between gap-2">
+		<a href="https://motorbunny.com">
+			<Image class="hidden min-w-[180px] md:block" src={logo} alt="motorbunny.com logo" />
+			<Image
+				class="block min-w-10 md:hidden"
+				src={logoSmall}
+				alt="motorbunny.com logo"
+				width={40}
+			/>
+		</a>
+		<p class="hidden whitespace-nowrap text-xl font-semibold text-primary lg:block">
+			WIN A MOTORBUNNY VALUED AT $1,340
+		</p>
+		<div class="flex items-center gap-2">
+			<input
+				type="text"
+				placeholder="Email"
+				class="input input-bordered w-full max-w-xs text-secondary"
+			/>
+			<button class="btn btn-primary text-base font-semibold"
+				>Enter <span class="hidden md:block">To Win</span></button
+			>
+		</div>
+	</div>
+</header>

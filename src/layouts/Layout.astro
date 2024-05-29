@@ -1,5 +1,6 @@
 ---
 import '../../base.css';
+import TailwindIndicator from '../components/win/TailwindIndicator.astro';
 interface Props {
 	title: string;
 	description: string;
@@ -55,5 +56,6 @@ const { title, description } = Astro.props;
 	</head>
 	<body class="min-h-screen text-base-100">
 		<slot />
+		<TailwindIndicator />
 	</body>
 </html>
