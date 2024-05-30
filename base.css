@@ -26,10 +26,41 @@
 	src: url('/fonts/montserrat-extrabold-webfont.woff2') format('woff2');
 }
 
+@font-face {
+	font-family: 'Nunito';
+	font-weight: 600;
+	src: url('/fonts/nunito-sans-semibold.woff2') format('woff2');
+}
+
 html {
 	scroll-behavior: smooth;
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
+}
+
+/* Klaviyo form styling */
+@layer {
+	/* header form */
+	.header-klaviyo-form div[data-testid='form-component'] {
+		@apply relative !bg-secondary;
+	}
+
+	.header-klaviyo-form button {
+		@apply !btn !btn-primary !text-base !font-extrabold;
+	}
+
+	.header-klaviyo-form input {
+		@apply !input !input-bordered w-full max-w-xs !text-secondary;
+	}
+
+	/* hero form */
+	.hero-klaviyo-form button {
+		@apply !btn !btn-secondary !font-extrabold !text-primary;
+	}
+
+	.hero-klaviyo-form input {
+		@apply !input !input-bordered w-full max-w-xs text-secondary hover:!border-[oklch(var(--bc)/0.2)];
+	}
 }
