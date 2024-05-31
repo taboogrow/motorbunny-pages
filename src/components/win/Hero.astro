@@ -35,12 +35,6 @@ const optimizedBackgroundSmall = await getImage({ src: backgroundImageSmall, for
 			class="mx-auto block h-auto w-full max-w-[557px] object-cover min-[1200px]:hidden"
 		/>
 	</div>
-
-	<style>
-		h1 {
-			text-shadow: 3px 3px 0px #ff7992;
-		}
-	</style>
 </section>
 
 <style
@@ -49,6 +43,9 @@ const optimizedBackgroundSmall = await getImage({ src: backgroundImageSmall, for
 		optimizedBackgroundSmall: `url(${optimizedBackgroundSmall.src})`
 	}}
 >
+	h1 {
+		text-shadow: 3px 3px 0px #ff7992;
+	}
 	section {
 		background-image: var(--optimizedBackground);
 	}

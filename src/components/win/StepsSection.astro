@@ -1,0 +1,45 @@
+---
+import Step from './Step.astro';
+import { MoveRight } from 'lucide-astro';
+---
+
+<section class="mx-auto max-w-[1440px] py-6 text-center md:py-14">
+	<h2 class="font-monsterrat text-[40px] font-bold leading-[45px] text-secondary">
+		As Easy As 1, 2, 3
+	</h2>
+	<div class="flex justify-center gap-8">
+		<Step number={1} title="Sign-up:" text="Sign-up for the giveaway to get the announcements.">
+			<div class="klaviyo-form-Xvvr7x step-klaviyo-form mx-auto max-w-80"></div>
+		</Step>
+		<Step
+			number={2}
+			title="Follow us on FetLife"
+			text="We share giveaway details here and content you love."
+		>
+			<a
+				href="https://fetlife.com/users/5002038"
+				target="_blank"
+				class="btn btn-secondary text-base font-semibold capitalize text-primary"
+				>Follow on FetLife <MoveRight class="ml-1" /></a
+			>
+		</Step>
+		<Step
+			number={3}
+			title="Join our Subreddit"
+			text="Join the convo with other Motorbunny users & fans."
+		>
+			<a
+				href="https://www.reddit.com/r/MotorBunny/"
+				target="_blank"
+				class="btn btn-secondary text-base font-semibold capitalize text-primary"
+				>Subscribe to subreddit <MoveRight class="ml-1" /></a
+			>
+		</Step>
+	</div>
+</section>
+
+<style>
+	h2 {
+		text-shadow: 3px 3px 0px #ff7992;
+	}
+</style>
