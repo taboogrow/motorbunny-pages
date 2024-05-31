@@ -1,0 +1,64 @@
+---
+import { getImage, Image } from 'astro:assets';
+import backgroundImage from '../../assets/images/win-hero-bg.png';
+import backgroundImageSmall from '../../assets/images/win-hero-bg-small.png';
+
+const optimizedBackground = await getImage({ src: backgroundImage, format: 'webp' });
+const optimizedBackgroundSmall = await getImage({ src: backgroundImageSmall, format: 'webp' });
+---
+
+<section
+	class="relative z-10 mx-auto max-w-[1440px] overflow-hidden via-40% bg-cover bg-right bg-no-repeat before:absolute before:inset-0 before:z-[-1] min-[1440px]:before:bg-[linear-gradient(to_right,rgba(255,255,255,1)0%,rgba(255,255,255,0)22%,rgba(175,170,195,0)94%,rgba(255,255,255,1)100%)]"
+>
+	<div
+		class="z-10 mx-auto mt-16 flex flex-col items-center px-5 min-[1200px]:mt-0 min-[1200px]:h-[630px] min-[1200px]:flex-row 2xl:px-0"
+	>
+		<div class="flex max-w-[557px] flex-col gap-[30px]">
+			<h1
+				class="font-monsterrat text-[40px] font-bold leading-[45px] text-secondary md:text-6xl md:leading-[55px]"
+			>
+				Enter To Win A Motorbunny
+			</h1>
+			<p class="max-w-[400px] text-lg">
+				Enter to win a free Motorbunny Original, valued at $1,340! Just sign-up with your email,
+				follow us on FetLife, and join our Subreddit.
+			</p>
+			<div class="klaviyo-form-Xvvr7x hero-klaviyo-form max-w-96"></div>
+		</div>
+	</div>
+	<div
+		class="relative right-8 mx-auto w-auto min-w-[440px] bg-cover bg-center after:absolute after:inset-0 after:shadow-[0_0_10px_10px_white_inset] min-[440px]:right-auto min-[557px]:w-fit"
+	>
+		<Image
+			src={backgroundImageSmall}
+			alt=""
+			class="mx-auto block h-auto w-full max-w-[557px] object-cover min-[1200px]:hidden"
+		/>
+	</div>
+
+	<style>
+		h1 {
+			text-shadow: 3px 3px 0px #ff7992;
+		}
+	</style>
+</section>
+
+<style
+	define:vars={{
+		optimizedBackground: `url(${optimizedBackground.src})`,
+		optimizedBackgroundSmall: `url(${optimizedBackgroundSmall.src})`
+	}}
+>
+	section {
+		background-image: var(--optimizedBackground);
+	}
+	@media (max-width: 1200px) {
+		section {
+			background-image: none;
+		}
+	}
+
+	.hero-mobile {
+		background-image: var(--optimizedBackgroundSmall);
+	}
+</style>

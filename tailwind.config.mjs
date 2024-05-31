@@ -4,7 +4,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				nunito: ['Nunito', 'sans-serif']
+				nunito: ['Nunito', 'sans-serif'],
+				monsterrat: ['Montserrat, sans-serif']
 			}
 		}
 	},

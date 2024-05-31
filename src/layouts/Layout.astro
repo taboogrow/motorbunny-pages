@@ -1,12 +1,14 @@
 ---
 import '../../base.css';
 import TailwindIndicator from '../components/win/TailwindIndicator.astro';
+import { cn } from '../lib/utils';
 interface Props {
 	title: string;
 	description: string;
+	className?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, className } = Astro.props;
 ---
 
 <!doctype html>
@@ -54,7 +56,7 @@ const { title, description } = Astro.props;
 		></script>
 		<!--END Digioh Fast Activation Javascript-->
 	</head>
-	<body class="min-h-screen text-base-100">
+	<body class={cn('min-h-screen text-base-100', className)}>
 		<slot />
 		<TailwindIndicator />
 	</body>

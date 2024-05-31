@@ -26,10 +26,23 @@
 	src: url('/fonts/montserrat-extrabold-webfont.woff2') format('woff2');
 }
 
+/* Nunito */
+@font-face {
+	font-family: 'Nunito';
+	font-weight: 400;
+	src: url('/fonts/nunito-sans-regular.woff2') format('woff2');
+}
+
 @font-face {
 	font-family: 'Nunito';
 	font-weight: 600;
 	src: url('/fonts/nunito-sans-semibold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Nunito';
+	font-weight: 700;
+	src: url('/fonts/nunito-sans-bold.woff2') format('woff2');
 }
 
 html {
@@ -57,7 +70,7 @@ body {
 
 	/* hero form */
 	.hero-klaviyo-form button {
-		@apply !btn !btn-secondary !font-extrabold !text-primary;
+		@apply !btn !btn-primary !font-extrabold !text-secondary;
 	}
 
 	.hero-klaviyo-form input {
