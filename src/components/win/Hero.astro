@@ -8,7 +8,7 @@ const optimizedBackgroundSmall = await getImage({ src: backgroundImageSmall, for
 ---
 
 <section
-	class="relative z-10 mx-auto max-w-[1440px] overflow-hidden via-40% bg-cover bg-right bg-no-repeat before:absolute before:inset-0 before:z-[-1] min-[1440px]:before:bg-[linear-gradient(to_right,rgba(255,255,255,1)0%,rgba(255,255,255,0)22%,rgba(175,170,195,0)94%,rgba(255,255,255,1)100%)]"
+	class="relative z-10 mx-auto max-w-[1440px] overflow-hidden via-40% bg-cover bg-right bg-no-repeat before:absolute before:inset-0 before:z-[-1]"
 >
 	<div
 		class="z-10 mx-auto mt-16 flex flex-col items-center px-5 min-[1200px]:mt-0 min-[1200px]:h-[630px] min-[1200px]:flex-row 2xl:px-0"
@@ -55,6 +55,18 @@ const optimizedBackgroundSmall = await getImage({ src: backgroundImageSmall, for
 	@media (max-width: 1200px) {
 		section {
 			background-image: none;
+		}
+	}
+
+	@media (min-width: 1400px) {
+		section::before {
+			background-image: linear-gradient(
+				to right,
+				rgba(255, 255, 255, 1) 0%,
+				rgba(255, 255, 255, 0) 22%,
+				rgba(175, 170, 195, 0) 94%,
+				rgba(255, 255, 255, 1) 100%
+			);
 		}
 	}
 
