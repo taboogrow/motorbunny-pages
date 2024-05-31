@@ -1,0 +1,59 @@
+---
+import 'swiper/css/bundle';
+import Step from './Step.astro';
+import { MoveRight } from 'lucide-astro';
+---
+
+<div class="relative pb-16">
+	<div class="swiper max-w-[417px]">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<Step number={1} title="Sign-up:" text="Sign-up for the giveaway to get the announcements.">
+					<div class="klaviyo-form-Xvvr7x step-klaviyo-form mx-auto max-w-80"></div>
+				</Step>
+			</div>
+			<div class="swiper-slide">
+				<Step
+					number={2}
+					title="Follow us on FetLife"
+					text="We share giveaway details here and content you love."
+				>
+					<a
+						href="https://fetlife.com/users/5002038"
+						target="_blank"
+						class="btn btn-secondary text-base font-semibold capitalize text-primary"
+						>Follow on FetLife <MoveRight class="ml-1" /></a
+					>
+				</Step>
+			</div>
+			<div class="swiper-slide">
+				<Step
+					number={3}
+					title="Join our Subreddit"
+					text="Join the convo with other Motorbunny users & fans."
+				>
+					<a
+						href="https://www.reddit.com/r/MotorBunny/"
+						target="_blank"
+						class="btn btn-secondary text-base font-semibold capitalize text-primary"
+						>Subscribe to subreddit <MoveRight class="ml-1" /></a
+					>
+				</Step>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-pagination"></div>
+</div>
+
+<script>
+	import Swiper from 'swiper/bundle';
+	const swiper = new Swiper('.swiper', {
+		spaceBetween: 32,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true
+		}
+	});
+</script>
+
+<style></style>

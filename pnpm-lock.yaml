@@ -32,6 +32,9 @@ importers:
       sharp:
         specifier: ^0.33.4
         version: 0.33.4
+      swiper:
+        specifier: ^11.1.4
+        version: 11.1.4
       tailwind-merge:
         specifier: ^2.3.0
         version: 2.3.0
@@ -2151,6 +2154,10 @@ packages:
     resolution: {integrity: sha512-X4UZvLhOglD5Xrp834HzGHf8RKUW0Ahigg/08yRO1no9t2NxffOkMiQ0WmaMIbaGlVTlSst2zWANsdhz5ybXgA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
+
+  swiper@11.1.4:
+    resolution: {integrity: sha512-1n7kbYJB2dFEpUHRFszq7gys/ofIBrMNibwTiMvPHwneKND/t9kImnHt6CfGPScMHgI+dWMbGTycCKGMoOO1KA==}
+    engines: {node: '>= 4.7.0'}
 
   tailwind-merge@2.3.0:
     resolution: {integrity: sha512-vkYrLpIP+lgR0tQCG6AP7zZXCTLc1Lnv/CCRT3BqJ9CZ3ui2++GPaGb1x/ILsINIMSYqqvrpqjUFsMNLlW99EA==}
@@ -4708,6 +4715,8 @@ snapshots:
       css-tree: 2.3.1
       csso: 5.0.5
       picocolors: 1.0.1
+
+  swiper@11.1.4: {}
 
   tailwind-merge@2.3.0:
     dependencies:

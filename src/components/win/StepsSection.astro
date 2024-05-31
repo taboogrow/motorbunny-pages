@@ -1,13 +1,14 @@
 ---
 import Step from './Step.astro';
 import { MoveRight } from 'lucide-astro';
+import StepsSwiper from './StepsSwiper.astro';
 ---
 
 <section class="mx-auto max-w-[1440px] py-6 text-center md:py-14">
 	<h2 class="font-monsterrat text-[40px] font-bold leading-[45px] text-secondary">
 		As Easy As 1, 2, 3
 	</h2>
-	<div class="flex justify-center gap-8">
+	<div class="hidden justify-center gap-8 lg:flex">
 		<Step number={1} title="Sign-up:" text="Sign-up for the giveaway to get the announcements.">
 			<div class="klaviyo-form-Xvvr7x step-klaviyo-form mx-auto max-w-80"></div>
 		</Step>
@@ -36,10 +37,11 @@ import { MoveRight } from 'lucide-astro';
 			>
 		</Step>
 	</div>
-</section>
+	<div class="black px-4 lg:hidden"><StepsSwiper /></div>
 
-<style>
-	h2 {
-		text-shadow: 3px 3px 0px #ff7992;
-	}
-</style>
+	<style>
+		h2 {
+			text-shadow: 3px 3px 0px #ff7992;
+		}
+	</style>
+</section>

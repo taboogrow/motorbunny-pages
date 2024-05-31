@@ -45,6 +45,13 @@
 	src: url('/fonts/nunito-sans-bold.woff2') format('woff2');
 }
 
+:root {
+	--swiper-pagination-color: oklch(var(--s));
+	--swiper-pagination-bullet-size: 12px;
+	--swiper-pagination-bullet-width: 12px;
+	--swiper-pagination-bullet-height: 12px;
+}
+
 html {
 	scroll-behavior: smooth;
 }
