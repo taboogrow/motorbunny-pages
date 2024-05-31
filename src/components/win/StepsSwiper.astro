@@ -4,8 +4,8 @@ import Step from './Step.astro';
 import { MoveRight } from 'lucide-astro';
 ---
 
-<div class="relative pb-16">
-	<div class="swiper max-w-[417px]">
+<div class="steps relative pb-16">
+	<div class="steps-swiper max-w-[417px] overflow-hidden">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
 				<Step number={1} title="Sign-up:" text="Sign-up for the giveaway to get the announcements.">
@@ -47,7 +47,7 @@ import { MoveRight } from 'lucide-astro';
 
 <script>
 	import Swiper from 'swiper/bundle';
-	const swiper = new Swiper('.swiper', {
+	const swiper = new Swiper(document.querySelector('.steps-swiper') as HTMLElement, {
 		spaceBetween: 32,
 		pagination: {
 			el: '.swiper-pagination',
@@ -56,4 +56,8 @@ import { MoveRight } from 'lucide-astro';
 	});
 </script>
 
-<style></style>
+<style is:global>
+	.steps .swiper-pagination-bullet-active {
+		background-color: oklch(var(--s));
+	}
+</style>

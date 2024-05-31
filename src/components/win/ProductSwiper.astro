@@ -1,0 +1,56 @@
+---
+import 'swiper/css/bundle';
+import { Image } from 'astro:assets';
+import ProductSwiper1 from '../../assets/images/product-swiper-1.png';
+import ProductSwiper2 from '../../assets/images/product-swiper-2.png';
+import ProductSwiper3 from '../../assets/images/product-swiper-3.png';
+import ProductSwiper4 from '../../assets/images/product-swiper-4.png';
+import ProductSwiper5 from '../../assets/images/product-swiper-5.png';
+---
+
+<div class="product relative mx-4 max-w-[624px] sm:mx-auto">
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<Image src={ProductSwiper1} alt="" class="rounded-lg" />
+			</div>
+			<div class="swiper-slide">
+				<Image src={ProductSwiper2} alt="" class="rounded-lg" />
+			</div>
+			<div class="swiper-slide">
+				<Image src={ProductSwiper3} alt="" class="rounded-lg" />
+			</div>
+			<div class="swiper-slide">
+				<Image src={ProductSwiper4} alt="" class="rounded-lg" />
+			</div>
+			<div class="swiper-slide">
+				<Image src={ProductSwiper5} alt="" class="rounded-lg" />
+			</div>
+		</div>
+		<div class="product-swiper-pagination mx-auto mt-8 !w-fit"></div>
+	</div>
+</div>
+<script>
+	import Swiper from 'swiper/bundle';
+	const swiper = new Swiper('.swiper', {
+		spaceBetween: 32,
+		pagination: {
+			el: '.product-swiper-pagination',
+			clickable: true
+		},
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: true
+		}
+	});
+</script>
+
+<style is:global>
+	.product .swiper-pagination-bullet-active {
+		background-color: oklch(var(--p)) !important;
+	}
+	.product .swiper-pagination-bullet {
+		background-color: #d1d5db;
+		opacity: 1;
+	}
+</style>

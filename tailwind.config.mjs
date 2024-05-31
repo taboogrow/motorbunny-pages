@@ -19,6 +19,7 @@ export default {
 					accent: '#8065b1', // purple
 					neutral: '#000000', // black
 					'base-100': '#ffffff', // white
+					'base-200': '#d3d3d3', // light gray
 					'--rounded-btn': '3px' // border radius rounded-btn utility class, used in buttons and similar elements
 				}
 			}
