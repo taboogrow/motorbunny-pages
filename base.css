@@ -47,10 +47,12 @@
 
 html {
 	scroll-behavior: smooth;
+	min-height: 100vh;
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
+	min-height: 100vh;
 }
 
 /* Klaviyo form styling */

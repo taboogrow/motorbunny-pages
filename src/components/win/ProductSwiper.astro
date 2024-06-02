@@ -9,7 +9,7 @@ import ProductSwiper5 from '../../assets/images/product-swiper-5.png';
 ---
 
 <div class="product relative mx-4 max-w-[624px] sm:mx-auto">
-	<div class="swiper">
+	<div class="swiper product-swiper">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
 				<Image src={ProductSwiper1} alt="" class="rounded-lg" />
@@ -32,7 +32,7 @@ import ProductSwiper5 from '../../assets/images/product-swiper-5.png';
 </div>
 <script>
 	import Swiper from 'swiper/bundle';
-	const swiper = new Swiper('.swiper', {
+	const swiper = new Swiper('.product-swiper', {
 		spaceBetween: 32,
 		pagination: {
 			el: '.product-swiper-pagination',

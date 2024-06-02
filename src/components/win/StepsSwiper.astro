@@ -4,15 +4,15 @@ import Step from './Step.astro';
 import { MoveRight } from 'lucide-astro';
 ---
 
-<div class="steps relative pb-16">
-	<div class="steps-swiper max-w-[417px] overflow-hidden">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide">
+<div class="steps-swiper-container relative pb-16">
+	<div class="swiper steps-swiper max-w-[417px] pb-6">
+		<div class="swiper-wrapper w-full">
+			<div class="swiper-slide max-w-[417px]">
 				<Step number={1} title="Sign-up:" text="Sign-up for the giveaway to get the announcements.">
 					<div class="klaviyo-form-Xvvr7x step-klaviyo-form mx-auto max-w-80"></div>
 				</Step>
 			</div>
-			<div class="swiper-slide">
+			<div class="swiper-slide max-w-[417px]">
 				<Step
 					number={2}
 					title="Follow us on FetLife"
@@ -26,7 +26,7 @@ import { MoveRight } from 'lucide-astro';
 					>
 				</Step>
 			</div>
-			<div class="swiper-slide">
+			<div class="swiper-slide max-w-[417px]">
 				<Step
 					number={3}
 					title="Join our Subreddit"
@@ -42,22 +42,24 @@ import { MoveRight } from 'lucide-astro';
 			</div>
 		</div>
 	</div>
-	<div class="swiper-pagination"></div>
+	<div class="swiper-pagination steps-pagination"></div>
 </div>
 
 <script>
 	import Swiper from 'swiper/bundle';
-	const swiper = new Swiper(document.querySelector('.steps-swiper') as HTMLElement, {
+	const swiper = new Swiper('.steps-swiper', {
 		spaceBetween: 32,
+		slidesPerView: 1,
+		grabCursor: true,
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.steps-pagination',
 			clickable: true
 		}
 	});
 </script>
 
 <style is:global>
-	.steps .swiper-pagination-bullet-active {
+	.steps-swiper-container .swiper-pagination-bullet-active {
 		background-color: oklch(var(--s));
 	}
 </style>
