@@ -9,15 +9,16 @@ type Props = {
 	message: string;
 	title: string;
 	location: string;
+	imageAlt: string;
 };
 
-const { image, message, title, location }: Props = Astro.props;
+const { image, message, title, location, imageAlt }: Props = Astro.props;
 ---
 
 <div
 	class="mx-auto flex min-h-[785px] max-w-[440px] flex-col gap-4 rounded-lg bg-white p-4 shadow-xl"
 >
-	<Image src={image} alt="" class="size-[408px] object-cover" />
+	<Image src={image} alt={imageAlt} class="size-[408px] object-cover" />
 	<div class="flex flex-col gap-5">
 		<div class="flex items-center gap-1">
 			<Star class="size-4 fill-secondary" />
