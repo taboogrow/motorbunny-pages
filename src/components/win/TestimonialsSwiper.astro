@@ -1,7 +1,5 @@
 ---
 import TestimonialsCard from './TestimonialsCard.astro';
-import 'swiper/css/bundle';
-import 'swiper/css/effect-coverflow';
 import Review2 from '../../assets/images/review-1.jpg';
 import Review1 from '../../assets/images/review-3.jpg';
 import Review3 from '../../assets/images/review-4.jpg';
@@ -59,8 +57,13 @@ const testimonials = [
 
 	<script>
 		import Swiper from 'swiper';
-
+		import 'swiper/css';
+		import 'swiper/css/effect-coverflow';
+		import 'swiper/css/pagination';
+		import 'swiper/css/navigation';
+		import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 		var swiper = new Swiper('.testimonials', {
+			modules: [EffectCoverflow, Pagination, Navigation],
 			effect: 'coverflow',
 			grabCursor: true,
 			centeredSlides: true,
