@@ -43,10 +43,10 @@ const testimonials = [
 			}
 		</div>
 		<div class="swiper-pagination testimonial-pagination"></div>
-		<!-- <div class="relative mx-auto max-w-screen-xl">
+		<div class="relative mx-auto max-w-screen-xl">
 			<div class="swiper-button-next"></div>
 			<div class="swiper-button-prev"></div>
-		</div> -->
+		</div>
 	</div>
 
 	<script>
@@ -60,7 +60,7 @@ const testimonials = [
 			initialSlide: 1,
 			roundLengths: true,
 			coverflowEffect: {
-				rotate: 0,
+				rotate: 11,
 				stretch: 120,
 				depth: 54,
 				slideShadows: true
@@ -68,11 +68,18 @@ const testimonials = [
 			pagination: {
 				el: '.testimonial-pagination',
 				clickable: true
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			breakpoints: {
+				700: {
+					coverflowEffect: {
+						rotate: 0
+					}
+				}
 			}
-			// navigation: {
-			// 	nextEl: '.swiper-button-next',
-			// 	prevEl: '.swiper-button-prev'
-			// }
 		});
 	</script>
 
