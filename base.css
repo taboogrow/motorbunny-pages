@@ -47,50 +47,10 @@
 
 html {
 	scroll-behavior: smooth;
-	min-height: 100vh;
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
-	min-height: 100vh;
-}
-
-/* Klaviyo form styling */
-@layer {
-	/* header form */
-	.header-klaviyo-form div[data-testid='form-component'] {
-		@apply relative !bg-secondary;
-	}
-
-	.header-klaviyo-form button {
-		@apply !btn !btn-primary !text-base !font-extrabold;
-	}
-
-	.header-klaviyo-form input {
-		@apply !input !input-bordered w-full max-w-xs !text-secondary;
-	}
-
-	/* hero form */
-	.hero-klaviyo-form button {
-		@apply !btn !btn-primary !font-extrabold !text-secondary;
-	}
-
-	.hero-klaviyo-form input {
-		@apply !input !input-bordered w-full max-w-xs text-secondary hover:!border-[oklch(var(--bc)/0.2)];
-	}
-
-	/* step form */
-	.step-klaviyo-form button {
-		@apply !btn !btn-secondary !font-extrabold !text-primary;
-	}
-
-	.step-klaviyo-form input {
-		@apply !input !input-bordered w-full max-w-xs !border-black text-secondary focus:!border-black focus:!outline-none;
-	}
-
-	.step-klaviyo-form div[data-testid='form-component'] {
-		@apply relative !bg-primary;
-	}
 }
 
 /* Swiper Custom Styles */
