@@ -5,6 +5,7 @@ import 'swiper/css/effect-coverflow';
 import Review2 from '../../assets/images/review-1.jpg';
 import Review1 from '../../assets/images/review-3.jpg';
 import Review3 from '../../assets/images/review-4.jpg';
+import { ArrowLeft, ArrowRight } from 'lucide-astro';
 
 const testimonials = [
 	{
@@ -33,20 +34,24 @@ const testimonials = [
 
 <div class="testimonials-container">
 	<div class="swiper testimonials w-full pb-20 pt-8">
+		<div class="relative top-[425px] mx-auto max-w-[550px] select-none">
+			<div class="swiper-button-next size-10 rounded-full bg-secondary p-2 after:content-['']">
+				<ArrowRight class="text-white" />
+			</div>
+			<div class="swiper-button-prev size-10 rounded-full bg-secondary p-2 after:content-['']">
+				<ArrowLeft class="text-white" />
+			</div>
+		</div>
 		<div class="swiper-wrapper w-full">
 			{
 				testimonials.map((testimonial) => (
-					<div class="swiper-slide mx-4 h-full w-fit">
+					<div class="swiper-slide ml-5 mr-3 h-full w-fit md:ml-0 md:mr-0">
 						<TestimonialsCard {...testimonial} />
 					</div>
 				))
 			}
 		</div>
 		<div class="swiper-pagination testimonial-pagination"></div>
-		<div class="relative mx-auto max-w-screen-xl">
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
-		</div>
 	</div>
 
 	<script>
