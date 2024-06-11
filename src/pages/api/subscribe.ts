@@ -38,6 +38,9 @@ export const POST: APIRoute = async ({ request }) => {
 								type: 'profile',
 								attributes: {
 									email
+								},
+								properties: {
+									$source: 'Win A Motorbunny'
 								}
 							}
 						]
