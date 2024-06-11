@@ -54,7 +54,6 @@
 
 html {
 	scroll-behavior: smooth;
-	scrollbar-color: currentColor !important;
 }
 
 body {
@@ -66,4 +65,5 @@ body {
 	--swiper-pagination-bullet-size: 12px;
 	--swiper-pagination-bullet-width: 12px;
 	--swiper-pagination-bullet-height: 12px;
+	scrollbar-color: currentColor;
 }
