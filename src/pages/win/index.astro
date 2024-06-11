@@ -1,0 +1,36 @@
+---
+import Header from '../../components/win/Header.astro';
+import Hero from '../../components/win/Hero.astro';
+import ProductSection from '../../components/win/ProductSection.astro';
+import StepsSection from '../../components/win/StepsSection.astro';
+import FAQ from '../../components/win/FAQ.astro';
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/win/Footer.astro';
+import Subscribe from '../../components/win/Subscribe.astro';
+import Testimonials from '../../components/win/Testimonials.astro';
+---
+
+<Layout
+	title="Win A Motorbunny Sex Machine - Valued at $1,340 - Enter to Win"
+	description="Enter to win a Motorbunny sex machine valued at $1,340. Just sign-up with your email address, then add entries and increase your chancese of winning by following us on FetLife and joining our Subreddit."
+	className="bg-white font-nunito text-secondary"
+	klaivyo={false}
+	lightbox={false}
+>
+	<Header />
+	<Hero />
+	<StepsSection />
+	<ProductSection />
+	<Testimonials />
+	<Subscribe />
+	<FAQ />
+	<Footer />
+</Layout>
+
+<script>
+	import AOS from 'aos';
+	import 'aos/dist/aos.css';
+	AOS.init({
+		once: true
+	});
+</script>

@@ -1,0 +1,36 @@
+---
+import TestimonialsSwiper from './TestimonialsSwiper.astro';
+---
+
+<section class="relative overflow-hidden bg-primary py-16">
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="100%"
+		height="74"
+		viewBox="0 0 1440 74"
+		fill="none"
+		preserveAspectRatio="none"
+		class="absolute -top-[1px] z-10 h-9 min-w-[700px] md:h-[74px] md:min-w-0"
+	>
+		<path
+			d="M257.208 17.6073C351.996 30.626 451.464 56.251 547.392 66.7573C646.104 77.5948 749.064 76.9635 847.932 66.5135C917.34 59.1823 984.732 47.0948 1054.33 40.351C1183.66 27.9607 1317.04 34.2484 1440 58.5323V0.626015H0V15.751C81.3719 1.30102 173.148 6.05727 257.208 17.6073Z"
+			fill="#242424"></path>
+	</svg>
+	<div class="mt-9 md:mt-[74px]">
+		<h2
+			class="text-center font-monsterrat text-4xl font-bold leading-[45px] text-secondary md:text-[40px]"
+			data-aos="fade-down"
+		>
+			Join Over 1,000 Happy Customers
+		</h2>
+		<div class="mx-auto mt-11">
+			<TestimonialsSwiper />
+		</div>
+	</div>
+</section>
+
+<style>
+	h2 {
+		text-shadow: 3px 3px 0px #fff;
+	}
+</style>

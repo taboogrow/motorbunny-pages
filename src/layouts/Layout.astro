@@ -1,11 +1,16 @@
 ---
 import '../../base.css';
+import TailwindIndicator from '../components/win/TailwindIndicator.astro';
+import { cn } from '../lib/utils';
 interface Props {
 	title: string;
 	description: string;
+	className?: string;
+	klaivyo?: boolean;
+	lightbox?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, className, klaivyo = true, lightbox = true } = Astro.props;
 ---
 
 <!doctype html>
@@ -37,23 +42,33 @@ const { title, description } = Astro.props;
 		<!-- <meta property="twitter:image" content="/mb-vs-sybian-social.jpg" /> -->
 
 		<!-- Klaviyo -->
-		<script
-			is:inline
-			async
-			type="text/javascript"
-			src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=J46vQf"></script>
+		{
+			klaivyo && (
+				<script
+					is:inline
+					async
+					type="text/javascript"
+					src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=J46vQf"
+				/>
+			)
+		}
 		<!-- End Klaviyo -->
 
 		<!--START Digioh Fast Activation Javascript for Spin to Win-->
-		<script
-			is:inline
-			async
-			type="text/javascript"
-			src="https://www.lightboxcdn.com/vendor/c1e11ba5-31e5-45fb-9c5c-b57b160bf2b0/lightbox_inline.js"
-		></script>
+		{
+			lightbox && (
+				<script
+					is:inline
+					async
+					type="text/javascript"
+					src="https://www.lightboxcdn.com/vendor/c1e11ba5-31e5-45fb-9c5c-b57b160bf2b0/lightbox_inline.js"
+				/>
+			)
+		}
 		<!--END Digioh Fast Activation Javascript-->
 	</head>
-	<body class="min-h-screen text-base-100">
+	<body class={cn('min-h-screen text-base-100', className)}>
 		<slot />
+		<TailwindIndicator />
 	</body>
 </html>

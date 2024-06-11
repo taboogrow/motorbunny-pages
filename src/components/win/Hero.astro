@@ -1,0 +1,137 @@
+---
+import { getImage, Image } from 'astro:assets';
+import backgroundImage from '../../assets/images/win-hero-bg.png';
+import backgroundImageSmall from '../../assets/images/win-hero-bg-small.png';
+import { Loader2 } from 'lucide-astro';
+
+const optimizedBackground = await getImage({ src: backgroundImage, format: 'webp' });
+const optimizedBackgroundSmall = await getImage({ src: backgroundImageSmall, format: 'webp' });
+---
+
+<section
+	class="relative z-10 mx-auto max-w-[1440px] overflow-hidden via-40% bg-cover bg-right bg-no-repeat before:absolute before:inset-0 before:z-[-1] md:overflow-visible"
+>
+	<div
+		class="z-10 mx-auto mt-16 flex flex-col items-center px-5 min-[1200px]:mt-0 min-[1200px]:h-[630px] min-[1200px]:flex-row 2xl:px-0"
+	>
+		<div class="flex max-w-[557px] flex-col gap-[30px]">
+			<h1
+				class="font-monsterrat text-[40px] font-bold leading-[45px] text-secondary md:text-6xl md:leading-[55px]"
+				data-aos="fade-right"
+			>
+				Enter To Win A Motorbunny
+			</h1>
+			<p class="max-w-[400px] text-lg" data-aos="fade-right" data-aos-delay="100">
+				Enter to win a free Motorbunny Original, valued at $1,340! Just sign-up with your email,
+				follow us on FetLife, and join our Subreddit.
+			</p>
+			<form
+				action="/api/subscribe"
+				method="POST"
+				class="mb-1"
+				id="hero-form"
+				data-aos="fade-right"
+				data-aos-delay="200"
+			>
+				<div class="flex items-center gap-2">
+					<input
+						type="email"
+						name="email"
+						class="input input-bordered input-primary w-full max-w-xs"
+						placeholder="Email"
+						required
+					/>
+					<button class="btn btn-primary text-base">
+						<span class="block" id="hero-submit">Enter to win</span>
+						<span class="hidden" id="hero-loading"><Loader2 class="size-5 animate-spin" /></span>
+					</button>
+				</div>
+				<p class="hidden font-semibold text-red-500" id="hero-error">
+					Failed to subscribe, try again
+				</p>
+			</form>
+		</div>
+	</div>
+	<div
+		class="relative right-8 mx-auto w-auto min-w-[440px] bg-cover bg-center after:absolute after:inset-0 after:shadow-[0_0_10px_10px_white_inset] min-[440px]:right-auto min-[557px]:w-fit"
+	>
+		<Image
+			src={backgroundImageSmall}
+			alt="model with motorbunny original sex machine and pink dildo attachments"
+			class="mx-auto block h-auto w-full max-w-[557px] object-cover min-[1200px]:hidden"
+			loading="eager"
+			width={557}
+			height={414}
+		/>
+	</div>
+</section>
+
+<style
+	define:vars={{
+		optimizedBackground: `url(${optimizedBackground.src})`,
+		optimizedBackgroundSmall: `url(${optimizedBackgroundSmall.src})`
+	}}
+>
+	h1 {
+		text-shadow: 3px 3px 0px #ff7992;
+	}
+	section {
+		background-image: var(--optimizedBackground);
+	}
+	@media (max-width: 1200px) {
+		section {
+			background-image: none;
+		}
+	}
+
+	@media (min-width: 1400px) {
+		section::before {
+			background-image: linear-gradient(
+				to right,
+				rgba(255, 255, 255, 1) 0%,
+				rgba(255, 255, 255, 0) 22%,
+				rgba(175, 170, 195, 0) 94%,
+				rgba(255, 255, 255, 1) 100%
+			);
+		}
+	}
+
+	.hero-mobile {
+		background-image: var(--optimizedBackgroundSmall);
+	}
+</style>
+
+<script>
+	const form = document.getElementById('hero-form') as HTMLFormElement;
+	const submit = document.getElementById('hero-submit');
+	const loading = document.getElementById('hero-loading');
+	const error = document.getElementById('hero-error');
+
+	form.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		submit.classList.remove('block');
+		submit.classList.add('hidden');
+		loading.classList.remove('hidden');
+		error.classList.remove('block');
+
+		const formData = new FormData(form);
+		const response = await fetch(form.action, {
+			method: form.method,
+			body: formData
+		});
+
+		if (response.ok) {
+			submit.classList.add('block');
+			loading.classList.add('hidden');
+			submit.classList.remove('hidden');
+			submit.innerText = 'Redirecting...';
+			return (window.location.href = '/win/thank-you');
+		} else {
+			submit.classList.add('block');
+			submit.classList.remove('hidden');
+			loading.classList.add('hidden');
+			error.classList.add('block');
+			error.classList.remove('hidden');
+		}
+	});
+</script>

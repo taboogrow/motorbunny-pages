@@ -5,25 +5,51 @@
 @font-face {
 	font-family: 'Montserrat';
 	font-weight: 400;
+	font-display: swap;
 	src: url('/fonts/montserrat-regular-webfont.woff2') format('woff2');
 }
 
 @font-face {
 	font-family: 'Montserrat';
 	font-weight: 600;
+	font-display: swap;
 	src: url('/fonts/montserrat-semibold-webfont.woff2') format('woff2');
 }
 
 @font-face {
 	font-family: 'Montserrat';
 	font-weight: 700;
+	font-display: swap;
 	src: url('/fonts/montserrat-bold-webfont.woff2') format('woff2');
 }
 
 @font-face {
 	font-family: 'Montserrat';
 	font-weight: 800;
+	font-display: swap;
 	src: url('/fonts/montserrat-extrabold-webfont.woff2') format('woff2');
+}
+
+/* Nunito */
+@font-face {
+	font-family: 'Nunito';
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/nunito-sans-regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Nunito';
+	font-weight: 600;
+	font-display: swap;
+	src: url('/fonts/nunito-sans-semibold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Nunito';
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/nunito-sans-bold.woff2') format('woff2');
 }
 
 html {
@@ -32,4 +58,15 @@ html {
 
 body {
 	font-family: 'Montserrat', sans-serif;
+}
+
+* {
+	scrollbar-color: auto;
+}
+
+/* Swiper Custom Styles */
+:root {
+	--swiper-pagination-bullet-size: 12px;
+	--swiper-pagination-bullet-width: 12px;
+	--swiper-pagination-bullet-height: 12px;
 }

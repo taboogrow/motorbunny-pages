@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import Review from '../../assets/images/review-1.jpg';
+import { Star } from 'lucide-astro';
+import type { ImageMetadata } from 'astro';
+
+type Props = {
+	image: ImageMetadata;
+	message: string;
+	title: string;
+	location: string;
+	imageAlt: string;
+};
+
+const { image, message, title, location, imageAlt }: Props = Astro.props;
+---
+
+<div
+	class="mx-auto flex min-h-[785px] max-w-[440px] flex-col gap-4 rounded-lg bg-white p-4 shadow-xl"
+>
+	<Image src={image} alt={imageAlt} class="size-[408px] object-cover" />
+	<div class="flex flex-col gap-5">
+		<div class="flex items-center gap-1">
+			<Star class="size-4 fill-secondary" />
+			<Star class="size-4 fill-secondary" />
+			<Star class="size-4 fill-secondary" />
+			<Star class="size-4 fill-secondary" />
+			<Star class="size-4 fill-secondary" />
+			<p class="ml-1 text-gray-600">5.0/5</p>
+		</div>
+		<p class="text-lg">
+			{message}
+		</p>
+	</div>
+	<div class="mt-auto border-t py-2">
+		<p class="text-xl font-semibold">{title}</p>
+		<p class="text-lg">{location}</p>
+	</div>
+</div>
