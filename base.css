@@ -49,6 +49,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+* {
+	scrollbar-color: currentColor;
+}
+
 body {
 	font-family: 'Montserrat', sans-serif;
 }
