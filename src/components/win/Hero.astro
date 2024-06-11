@@ -17,14 +17,22 @@ const optimizedBackgroundSmall = await getImage({ src: backgroundImageSmall, for
 		<div class="flex max-w-[557px] flex-col gap-[30px]">
 			<h1
 				class="font-monsterrat text-[40px] font-bold leading-[45px] text-secondary md:text-6xl md:leading-[55px]"
+				data-aos="fade-right"
 			>
 				Enter To Win A Motorbunny
 			</h1>
-			<p class="max-w-[400px] text-lg">
+			<p class="max-w-[400px] text-lg" data-aos="fade-right" data-aos-delay="100">
 				Enter to win a free Motorbunny Original, valued at $1,340! Just sign-up with your email,
 				follow us on FetLife, and join our Subreddit.
 			</p>
-			<form action="/api/subscribe" method="POST" class="mb-1" id="hero-form">
+			<form
+				action="/api/subscribe"
+				method="POST"
+				class="mb-1"
+				id="hero-form"
+				data-aos="fade-right"
+				data-aos-delay="200"
+			>
 				<div class="flex items-center gap-2">
 					<input
 						type="email"

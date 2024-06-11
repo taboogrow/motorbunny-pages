@@ -6,11 +6,20 @@ import { Loader2 } from 'lucide-astro';
 ---
 
 <section class="mx-auto max-w-[1440px] py-6 text-center md:py-14">
-	<h2 class="font-monsterrat text-[40px] font-bold leading-[45px] text-secondary">
+	<h2
+		class="font-monsterrat text-[40px] font-bold leading-[45px] text-secondary"
+		data-aos="fade-down"
+	>
 		As Easy As 1, 2, 3
 	</h2>
 	<div class="hidden justify-center gap-8 lg:flex">
-		<Step number={1} title="Sign-up:" text="Sign-up for the giveaway to get the announcements.">
+		<Step
+			number={1}
+			title="Sign-up:"
+			text="Sign-up for the giveaway to get the announcements."
+			data-aos="fade-right"
+			data-aos-delay="100"
+		>
 			<form action="/api/subscribe" method="POST" class="mb-1" id="steps-form">
 				<div class="flex items-center gap-2">
 					<input
@@ -34,6 +43,8 @@ import { Loader2 } from 'lucide-astro';
 			number={2}
 			title="Follow us on FetLife"
 			text="We share giveaway details here and content you love."
+			data-aos="fade-right"
+			data-aos-delay="100"
 		>
 			<a
 				href="https://fetlife.com/users/5002038"
@@ -46,6 +57,8 @@ import { Loader2 } from 'lucide-astro';
 			number={3}
 			title="Join our Subreddit"
 			text="Join the convo with other Motorbunny users & fans."
+			data-aos="fade-right"
+			data-aos-delay="100"
 		>
 			<a
 				href="https://www.reddit.com/r/MotorBunny/"
@@ -55,7 +68,7 @@ import { Loader2 } from 'lucide-astro';
 			>
 		</Step>
 	</div>
-	<div class="black px-4 lg:hidden"><StepsSwiper /></div>
+	<div class="black px-4 lg:hidden" data-aos="fade-down" data-aos-delay="100"><StepsSwiper /></div>
 </section>
 <style>
 	h2 {
