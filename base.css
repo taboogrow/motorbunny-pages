@@ -50,7 +50,7 @@ html {
 }
 
 * {
-	scrollbar-color: currentColor;
+	scrollbar-color: currentColor !important;
 }
 
 body {
