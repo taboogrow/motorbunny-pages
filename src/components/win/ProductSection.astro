@@ -30,25 +30,40 @@ const includedList = [
 	<div class="bg-secondary py-6 text-base-200 md:py-16">
 		<div class="mx-auto flex max-w-[1312px] flex-col-reverse gap-6 lg:flex-row">
 			<div class="px-5 lg:py-7">
-				<h2 class="mb-7 font-monsterrat text-[40px] font-bold text-white md:mb-8">
+				<h2
+					class="mb-7 font-monsterrat text-[40px] font-bold text-white md:mb-8"
+					data-aos="fade-right"
+				>
 					What You’ll Win
 				</h2>
-				<Image src={logo} alt="logo" class="mb-6 h-auto w-[250px] md:mb-3" />
-				<p class="mb-6">
+				<Image
+					src={logo}
+					alt="logo"
+					class="mb-6 h-auto w-[250px] md:mb-3"
+					data-aos="fade-right"
+					data-aos-delay="100"
+				/>
+				<p class="mb-6" data-aos="fade-right" data-aos-delay="100">
 					We're thrilled to announce that you have the chance to win the ultimate pleasure device:
 					the Motorbunny Original! This classic ride-on-top vibrator is designed to rock your world
 					with its powerful vibrations and rotations. With a variety of attachments for both him and
 					her, app integration, and even fun games, there's something here for everyone to enjoy
 				</p>
-				<p class="text-lg text-primary">
+				<p class="text-lg text-primary" data-aos="fade-right" data-aos-delay="100">
 					valued at<span class="ml-2 font-monsterrat text-2xl font-bold">$1,340</span>
 				</p>
 				<div class="mt-7 flex flex-col gap-2">
-					<h3 class="text-lg font-bold">WHAT’S INCLUDED</h3>
+					<h3 class="text-lg font-bold" data-aos="fade-right" data-aos-delay="100">
+						WHAT’S INCLUDED
+					</h3>
 					<ul class="flex flex-col gap-2">
 						{
-							includedList.map((item) => (
-								<li class="flex items-center gap-3">
+							includedList.map((item, index) => (
+								<li
+									class="flex items-center gap-3"
+									data-aos="fade-right"
+									data-aos-delay={200 + index * 250}
+								>
 									<Check
 										class="size-5 rounded-full bg-primary p-[2px] text-secondary"
 										stroke-width="3"
