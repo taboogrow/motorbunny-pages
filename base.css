@@ -60,10 +60,13 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+* {
+	scrollbar-color: auto;
+}
+
 /* Swiper Custom Styles */
 :root {
 	--swiper-pagination-bullet-size: 12px;
 	--swiper-pagination-bullet-width: 12px;
 	--swiper-pagination-bullet-height: 12px;
-	scrollbar-color: currentColor;
 }
