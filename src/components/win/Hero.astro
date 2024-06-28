@@ -1,6 +1,6 @@
 ---
 import { getImage, Image } from 'astro:assets';
-import backgroundImage from '../../assets/images/win-hero-bg.png';
+import backgroundImage from '../../assets/images/win-hero-bg.webp';
 import backgroundImageSmall from '../../assets/images/win-hero-bg-small.png';
 import { Loader2 } from 'lucide-astro';
 
@@ -126,10 +126,18 @@ const optimizedBackgroundSmall = await getImage({ src: backgroundImageSmall, for
 			submit.classList.remove('hidden');
 			submit.innerText = 'Redirecting...';
 			return (window.location.href = '/win/thank-you');
+		} else if (response.status === 400) {
+			submit.classList.add('block');
+			submit.classList.remove('hidden');
+			loading.classList.add('hidden');
+			error.innerText = 'Invalid Email';
+			error.classList.add('block');
+			error.classList.remove('hidden');
 		} else {
 			submit.classList.add('block');
 			submit.classList.remove('hidden');
 			loading.classList.add('hidden');
+			error.innerText = 'Failed to subscribe, try again';
 			error.classList.add('block');
 			error.classList.remove('hidden');
 		}

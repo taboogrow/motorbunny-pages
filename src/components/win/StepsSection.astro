@@ -34,7 +34,7 @@ import { Loader2 } from 'lucide-astro';
 						<span class="hidden" id="steps-loading"><Loader2 class="size-5 animate-spin" /></span>
 					</button>
 				</div>
-				<p class="hidden font-semibold text-red-500" id="steps-error">
+				<p class="hidden text-left font-semibold" id="steps-error">
 					Failed to subscribe, try again
 				</p>
 			</form>
@@ -101,10 +101,18 @@ import { Loader2 } from 'lucide-astro';
 			submit.classList.remove('hidden');
 			submit.innerText = 'Redirecting...';
 			return (window.location.href = '/win/thank-you');
+		} else if (response.status === 400) {
+			submit.classList.add('block');
+			submit.classList.remove('hidden');
+			loading.classList.add('hidden');
+			error.innerText = 'Invalid Email';
+			error.classList.add('block');
+			error.classList.remove('hidden');
 		} else {
 			submit.classList.add('block');
 			submit.classList.remove('hidden');
 			loading.classList.add('hidden');
+			error.innerText = 'Failed to subscribe, try again';
 			error.classList.add('block');
 			error.classList.remove('hidden');
 		}

@@ -2,6 +2,9 @@
 import '../../base.css';
 import TailwindIndicator from '../components/win/TailwindIndicator.astro';
 import { cn } from '../lib/utils';
+import GTag from '../components/GTag.astro';
+import Hotjar from '../components/Hotjar.astro';
+import UniversalScript from '../components/UniversalScript.astro';
 interface Props {
 	title: string;
 	description: string;
@@ -19,7 +22,7 @@ const { title, description, className, klaivyo = true, lightbox = true } = Astro
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<!-- Primary Meta Tags -->
-		<meta name="title" content={title} />
+		<title>{title}</title>
 		<meta name="description" content={description} />
 		<!-- favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -66,9 +69,13 @@ const { title, description, className, klaivyo = true, lightbox = true } = Astro
 			)
 		}
 		<!--END Digioh Fast Activation Javascript-->
+		<GTag />
+		<UniversalScript />
 	</head>
 	<body class={cn('min-h-screen text-base-100', className)}>
 		<slot />
 		<TailwindIndicator />
+		<!-- Hotjar Tracking Code for www.motorbunny.com -->
+		<Hotjar />
 	</body>
 </html>
