@@ -65,10 +65,72 @@ export const POST: APIRoute = async ({ request }) => {
 		profileId = (await createProfileResponse.json()).data.id;
 	}
 
+	const subscribeProfileResponse = await fetch(
+		'https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs',
+		{
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/vnd.api+json',
+				accept: 'application/vnd.api+json',
+				Authorization: `Klaviyo-API-Key ${KLAVIYO_API_KEY}`,
+				revision: '2024-10-15'
+			},
+			body: JSON.stringify({
+				data: {
+					type: 'profile-subscription-bulk-create-job',
+					attributes: {
+						profiles: {
+							data: [
+								{
+									type: 'profile',
+									id: profileId,
+									attributes: {
+										email: email,
+										subscriptions: {
+											email: {
+												marketing: {
+													consent: 'SUBSCRIBED'
+												}
+											}
+										}
+									}
+								}
+							]
+						}
+					},
+
+					relationships: {
+						list: {
+							data: {
+								type: 'list',
+								id: KLAVIYO_LIST_ID
+							}
+						}
+					}
+				}
+			})
+		}
+	);
+
+	if (subscribeProfileResponse.status !== 202) {
+		const errorData = await subscribeProfileResponse.json();
+		console.error('Error setting subscription status:', errorData);
+		return new Response(
+			JSON.stringify({
+				message: 'Error setting subscription status'
+			}),
+			{
+				status: 500
+			}
+		);
+	}
+
 	if (
 		(createProfileResponse.status !== 201 && createProfileResponse.status !== 409) ||
 		!profileId
 	) {
+		const errorData = await createProfileResponse.json();
+		console.error('Error creating profile:', errorData);
 		return new Response(
 			JSON.stringify({
 				message: 'Error creating profile'
