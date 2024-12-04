@@ -65,6 +65,48 @@ export const POST: APIRoute = async ({ request }) => {
 		profileId = (await createProfileResponse.json()).data.id;
 	}
 
+	const unsuppressProfileResponse = await fetch(
+		'https://a.klaviyo.com/api/profile-suppression-bulk-delete-jobs/',
+		{
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Authorization: `Klaviyo-API-Key ${KLAVIYO_API_KEY}`,
+				revision: '2024-05-15'
+			},
+			body: JSON.stringify({
+				data: {
+					type: 'profile-suppression-bulk-delete-job',
+					attributes: {
+						profiles: {
+							data: [
+								{
+									type: 'profile',
+									attributes: {
+										email: email
+									}
+								}
+							]
+						}
+					}
+				}
+			})
+		}
+	);
+
+	if (unsuppressProfileResponse.status !== 202) {
+		const errorData = await unsuppressProfileResponse.json();
+		console.error('Error unsuppressing profile:', errorData);
+		return new Response(
+			JSON.stringify({
+				message: 'Error unsuppressing profile'
+			}),
+			{
+				status: 500
+			}
+		);
+	}
+
 	const subscribeProfileResponse = await fetch(
 		'https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs',
 		{
@@ -140,8 +182,6 @@ export const POST: APIRoute = async ({ request }) => {
 			}
 		);
 	}
-
-	console.log(profileId);
 
 	const addProfileToListResponse = await fetch(
 		`https://a.klaviyo.com/api/lists/${KLAVIYO_LIST_ID}/relationships/profiles/`,
