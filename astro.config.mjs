@@ -22,6 +22,6 @@ export default defineConfig({
 			CSS: false
 		})
 	],
-	output: 'hybrid',
+	output: 'server',
 	adapter: netlify()
 });
